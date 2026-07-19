@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Aylwin Wan's public life home for business architecture, life design, exploration, writing, and thoughtful long-term building."
+      content="Aylwin Wan's personal website for selected thinking on business architecture, systems thinking, life architecture, learning, culture, and meaningful exploration."
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+      content="default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
     />
-    <title>Aylwin Wan | Public Life Home</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/common-footer.css" />
+    <title>Aylwin Wan | Selected Thinking</title>
     <style>
       :root {
         color-scheme: light;
@@ -44,7 +46,7 @@
         margin: 0;
         background: var(--ivory);
         color: var(--ink);
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.6;
       }
 
@@ -68,7 +70,7 @@
         top: 0;
         z-index: 10;
         border-bottom: 1px solid rgba(19, 32, 51, 0.1);
-        background: rgba(247, 241, 228, 0.88);
+        background: rgba(247, 241, 228, 0.9);
         backdrop-filter: blur(16px);
       }
 
@@ -88,6 +90,7 @@
         font-weight: 760;
         letter-spacing: 0.02em;
         text-decoration: none;
+        white-space: nowrap;
       }
 
       .brand-mark {
@@ -114,9 +117,15 @@
         text-decoration: none;
       }
 
+      .nav-links a[aria-current="page"] {
+        color: var(--navy);
+        box-shadow: inset 0 -2px 0 var(--crimson);
+        font-weight: 760;
+      }
+
       .hero {
         position: relative;
-        min-height: calc(100vh - 64px);
+        min-height: calc(100vh - 170px);
         overflow: hidden;
         border-bottom: 1px solid var(--line);
         background: var(--paper);
@@ -141,7 +150,7 @@
         z-index: 1;
         content: "";
         background:
-          linear-gradient(90deg, rgba(247, 241, 228, 0.94), rgba(247, 241, 228, 0.74) 43%, rgba(247, 241, 228, 0.1)),
+          linear-gradient(90deg, rgba(247, 241, 228, 0.95), rgba(247, 241, 228, 0.8) 48%, rgba(247, 241, 228, 0.12)),
           linear-gradient(180deg, rgba(247, 241, 228, 0.08), rgba(247, 241, 228, 0.72));
       }
 
@@ -151,9 +160,9 @@
         display: grid;
         align-content: center;
         width: min(1160px, calc(100% - 32px));
-        min-height: calc(100vh - 64px);
+        min-height: calc(100vh - 170px);
         margin: 0 auto;
-        padding: 76px 0 86px;
+        padding: 56px 0 64px;
       }
 
       .kicker {
@@ -176,23 +185,24 @@
       }
 
       h1 {
-        max-width: 760px;
-        font-size: clamp(48px, 8vw, 112px);
-        line-height: 0.94;
+        max-width: 860px;
+        font-size: clamp(64px, 6vw, 76px);
+        line-height: 0.98;
       }
 
       .hero-copy {
-        max-width: 660px;
-        margin: 26px 0 0;
+        max-width: 700px;
+        margin: 24px 0 0;
         color: #29374a;
-        font-size: clamp(18px, 2vw, 23px);
-        line-height: 1.45;
+        font-size: clamp(18px, 1.6vw, 20px);
+        line-height: 1.55;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        align-items: center;
+        gap: 12px 18px;
         margin-top: 34px;
       }
 
@@ -200,14 +210,14 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 44px;
+        min-height: 46px;
         border: 1px solid rgba(8, 32, 79, 0.22);
         border-radius: var(--radius);
-        padding: 10px 16px;
+        padding: 11px 18px;
         background: var(--navy);
         color: #fffaf0;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 760;
         text-decoration: none;
       }
 
@@ -217,7 +227,7 @@
       }
 
       .button.secondary {
-        background: rgba(255, 250, 240, 0.72);
+        background: rgba(255, 250, 240, 0.76);
         color: var(--navy);
       }
 
@@ -225,14 +235,39 @@
         color: var(--crimson);
       }
 
+      .button.tertiary {
+        min-height: 0;
+        border: 0;
+        padding: 8px 0;
+        background: transparent;
+        color: var(--navy);
+        font-weight: 760;
+        text-decoration: underline;
+        text-decoration-color: rgba(180, 35, 55, 0.45);
+        text-underline-offset: 0.24em;
+      }
+
+      .button.tertiary:hover,
+      .button.tertiary:focus-visible {
+        color: var(--crimson);
+      }
+
+      .button.disabled,
+      .button.disabled:hover {
+        cursor: default;
+        border-color: rgba(19, 32, 51, 0.14);
+        background: rgba(255, 250, 240, 0.45);
+        color: #6e7886;
+      }
+
       .hero-ledger {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        max-width: 760px;
+        max-width: 860px;
         margin-top: 56px;
         border-top: 1px solid rgba(19, 32, 51, 0.22);
         border-left: 1px solid rgba(19, 32, 51, 0.16);
-        background: rgba(255, 250, 240, 0.68);
+        background: rgba(255, 250, 240, 0.7);
         box-shadow: var(--shadow);
       }
 
@@ -243,6 +278,7 @@
         border-bottom: 1px solid rgba(19, 32, 51, 0.16);
       }
 
+      .eyebrow,
       .ledger-label {
         display: block;
         margin-bottom: 12px;
@@ -272,66 +308,63 @@
 
       .section-heading {
         display: grid;
-        grid-template-columns: minmax(0, 0.8fr) minmax(260px, 1.2fr);
+        grid-template-columns: minmax(0, 0.85fr) minmax(260px, 1.15fr);
         gap: 48px;
         align-items: start;
         margin-bottom: 42px;
       }
 
       .section-heading h2 {
-        font-size: clamp(32px, 4vw, 58px);
+        font-size: clamp(44px, 4.6vw, 56px);
         line-height: 1;
       }
 
-      .section-heading p {
+      .section-heading p,
+      .lead {
         margin: 0;
         color: #3f4d60;
         font-size: 18px;
       }
 
-      .statement {
+      .section-heading-single {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 760px;
+      }
+
+      .story {
         background: var(--navy);
         color: #fffaf0;
       }
 
-      .statement h2,
-      .statement .kicker {
+      .story h2,
+      .story .kicker {
         color: #fffaf0;
       }
 
-      .statement .section-heading p,
-      .statement p {
+      .story .section-heading p,
+      .story p {
         color: #dce6ef;
       }
 
-      .statement-grid {
+      .story .field-note .eyebrow {
+        color: #f3c8cf;
+      }
+
+      .story-grid {
         display: grid;
         grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
         gap: 36px;
         align-items: stretch;
       }
 
-      .manifesto {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        border-top: 1px solid rgba(255, 250, 240, 0.2);
-      }
-
-      .manifesto li {
+      .story-copy {
         display: grid;
-        grid-template-columns: 88px minmax(0, 1fr);
         gap: 18px;
-        padding: 18px 0;
-        border-bottom: 1px solid rgba(255, 250, 240, 0.2);
       }
 
-      .manifesto span {
-        color: #f3c8cf;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+      .story-copy p {
+        margin: 0;
+        font-size: 19px;
       }
 
       .field-note {
@@ -352,47 +385,96 @@
         line-height: 1.35;
       }
 
-      .pillars {
+      .field-note h3 {
+        margin: 0 0 16px;
+        color: #fffaf0;
+        font-size: 30px;
+        line-height: 1.08;
+      }
+
+      .field-note .button {
+        margin-top: 24px;
+      }
+
+      .frameworks {
+        background: var(--paper);
+      }
+
+      .frameworks-intro {
+        max-width: 800px;
+        margin: -10px 0 28px;
+        color: #3f4d60;
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .framework-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: minmax(0, 1fr);
         gap: 16px;
       }
 
-      .pillar,
-      .writing-card,
-      .principle {
+      .framework-card {
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: rgba(255, 250, 240, 0.7);
+        padding: 28px;
+        background: rgba(255, 250, 240, 0.72);
       }
 
-      .pillar {
-        display: grid;
-        min-height: 310px;
-        padding: 24px;
+      .framework-card-header {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px;
       }
 
-      .pillar-number {
+      .framework-card h3 {
+        max-width: 760px;
+        font-size: 38px;
+        line-height: 1.04;
+      }
+
+      .status-badge {
+        flex: 0 0 auto;
+        border: 1px solid rgba(180, 35, 55, 0.28);
+        border-radius: var(--radius);
+        padding: 6px 10px;
         color: var(--crimson);
-        font-size: 12px;
-        font-weight: 820;
-        letter-spacing: 0.16em;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
       }
 
-      .pillar h3,
-      .writing-card h3,
-      .principle h3 {
-        margin-top: 38px;
-        font-size: 30px;
-        line-height: 1.05;
+      .framework-copy {
+        display: grid;
+        gap: 14px;
+        max-width: 880px;
+        margin-top: 22px;
       }
 
-      .pillar p,
-      .writing-card p,
-      .principle p {
-        margin: 18px 0 0;
+      .framework-copy p,
+      .story-preview-copy p {
+        margin: 0;
         color: #4e5c6f;
+      }
+
+      .framework-note {
+        margin: 26px 0 0;
+        color: var(--gold);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .story-preview-copy {
+        display: grid;
+        gap: 14px;
+      }
+
+      .story .story-preview-copy p {
+        color: #dce6ef;
       }
 
       .writing {
@@ -401,70 +483,229 @@
 
       .writing-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
       }
 
       .writing-card {
-        min-height: 230px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 250, 240, 0.72);
+      }
+
+      .writing-card {
+        display: grid;
+        align-content: start;
+        min-height: 292px;
         padding: 24px;
-        background: rgba(255, 255, 255, 0.64);
+        background: rgba(255, 255, 255, 0.66);
       }
 
       .writing-card h3 {
         margin-top: 0;
+        font-size: 28px;
+        line-height: 1.08;
       }
 
-      .writing-card small {
-        display: inline-block;
-        margin-top: 22px;
-        color: var(--crimson);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.13em;
+      .writing-card p {
+        margin: 18px 0 0;
+        color: #4e5c6f;
+      }
+
+      .writing-card .button {
+        justify-self: start;
+        margin-top: 24px;
+      }
+
+      .about-home {
+        background: var(--paper);
+      }
+
+      .about-home .section-inner {
+        padding-top: 104px;
+        padding-bottom: 0;
+      }
+
+      .about-stack {
+        display: grid;
+        gap: 88px;
+      }
+
+      .about-editorial-intro {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
+        gap: clamp(40px, 6vw, 88px);
+        align-items: start;
+      }
+
+      .about-title-block {
+        position: sticky;
+        top: 108px;
+      }
+
+      .about-title-block h2 {
+        max-width: 460px;
+        margin: 0;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(38px, 4.4vw, 60px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+      }
+
+      .about-identity {
+        max-width: 360px;
+        margin: 24px 0 0;
+        color: #5d6978;
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .about-bio {
+        max-width: 680px;
+      }
+
+      .about-copy-block {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .about-copy-block p {
+        margin: 0;
+        color: #3f4d60;
+        font-size: clamp(18px, 1.5vw, 19px);
+        line-height: 1.72;
+      }
+
+      .bio-facts {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 34px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+      }
+
+      .bio-facts span {
+        min-width: 0;
+        border-left: 1px solid rgba(19, 32, 51, 0.14);
+        padding-left: 14px;
+        color: #647184;
+        font-size: 11px;
+        font-weight: 820;
+        letter-spacing: 0.1em;
+        line-height: 1.45;
         text-transform: uppercase;
+      }
+
+      .bio-facts span:first-child {
+        border-left: 0;
+        padding-left: 0;
+      }
+
+      .point-of-view-band {
+        margin-right: calc(50% - 50vw);
+        margin-left: calc(50% - 50vw);
+        padding: 82px max(32px, calc((100vw - 1160px) / 2)) 88px;
+        background: #eef4f5;
+      }
+
+      .point-layout {
+        display: grid;
+        grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+        gap: clamp(34px, 6vw, 78px);
+        align-items: start;
+      }
+
+      .point-layout h3,
+      .principles-header h3 {
+        margin: 0;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.05;
+      }
+
+      .point-layout h3 {
+        max-width: 520px;
+        font-size: clamp(30px, 3.4vw, 42px);
+      }
+
+      .point-copy {
+        max-width: 680px;
+      }
+
+      .point-question {
+        max-width: 900px;
+        margin: 52px 0 0;
+        border-left: 3px solid var(--crimson);
+        padding: 4px 0 4px 24px;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(34px, 4vw, 48px);
+        line-height: 1.12;
+      }
+
+      .point-closing {
+        max-width: 680px;
+        margin: 28px 0 0;
+        color: #4e5c6f;
+        font-size: 18px;
+      }
+
+      .principles-editorial {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+        gap: clamp(38px, 6vw, 78px);
+        align-items: start;
+      }
+
+      .principles-header h3 {
+        font-size: clamp(34px, 4vw, 52px);
       }
 
       .principles-grid {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 12px;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, auto);
+        gap: 0 52px;
       }
 
       .principle {
-        min-height: 190px;
-        padding: 20px;
+        min-width: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 24px;
+        margin-bottom: 24px;
+      }
+
+      .principle-number {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--crimson);
+        font-size: 12px;
+        font-weight: 820;
+        letter-spacing: 0.14em;
       }
 
       .principle h3 {
-        margin-top: 0;
-        font-size: 22px;
-      }
-
-      .about-grid {
-        display: grid;
-        grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
-        gap: 48px;
-        align-items: start;
-      }
-
-      .about-aside {
-        border-left: 3px solid var(--crimson);
-        padding-left: 20px;
-      }
-
-      .about-aside p {
         margin: 0;
-        color: #3d4a5c;
+        color: var(--navy);
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 24px;
-        line-height: 1.36;
+        font-size: clamp(24px, 2.2vw, 32px);
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.12;
       }
 
-      .about-copy p {
-        margin: 0 0 18px;
-        color: #3f4d60;
-        font-size: 18px;
+      .principle p {
+        margin: 12px 0 0;
+        color: #4e5c6f;
+        font-size: 16px;
+        line-height: 1.62;
       }
 
       .contact {
@@ -472,67 +713,102 @@
         color: #fffaf0;
       }
 
-      .contact h2,
-      .contact .kicker {
-        color: #fffaf0;
+      .contact .section-inner {
+        padding-top: 84px;
       }
 
-      .contact p {
-        color: #d8e0e8;
+      .final-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
+        gap: clamp(40px, 6vw, 78px);
+        align-items: start;
+        padding-bottom: 74px;
+      }
+
+      .final-panel .kicker,
+      .final-panel .eyebrow,
+      .contact .kicker {
+        color: #f3c8cf;
+      }
+
+      .life-reminder blockquote {
+        max-width: 780px;
+        margin: 0;
+      }
+
+      .life-reminder .quote-text {
+        margin: 16px 0 0;
+        color: #fffaf0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(36px, 4.2vw, 48px);
+        line-height: 1.15;
+      }
+
+      .life-reminder cite {
+        display: block;
+        margin-top: 22px;
+        color: #c8d2dd;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
 
       .contact-panel {
-        display: grid;
-        grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
-        gap: 32px;
-        align-items: end;
-        border: 1px solid rgba(255, 250, 240, 0.2);
-        border-radius: var(--radius);
-        padding: 30px;
-        background: rgba(255, 250, 240, 0.05);
+        border-left: 1px solid rgba(255, 250, 240, 0.22);
+        padding-left: clamp(28px, 4vw, 48px);
       }
 
       .contact-panel h2 {
-        max-width: 760px;
-        font-size: clamp(34px, 5vw, 68px);
-        line-height: 0.98;
+        max-width: 420px;
+        color: #fffaf0;
+        font-size: clamp(36px, 3.6vw, 44px);
+        line-height: 1.05;
       }
 
       .contact-panel p {
-        max-width: 720px;
-        margin: 24px 0 0;
+        max-width: 460px;
+        margin: 22px 0 0;
+        color: #d8e0e8;
         font-size: 18px;
+        line-height: 1.66;
       }
 
-      .contact-list {
-        display: grid;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
+      .contact-action {
+        display: flex;
+        margin-top: 28px;
       }
 
-      .contact-list a,
-      .contact-list span {
-        display: block;
-        border: 1px solid rgba(255, 250, 240, 0.18);
+      .contact-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        border: 1px solid rgba(255, 250, 240, 0.3);
         border-radius: var(--radius);
-        padding: 12px 14px;
+        padding: 13px 18px;
         background: rgba(255, 250, 240, 0.07);
         color: #fffaf0;
+        font-size: 14px;
+        font-weight: 780;
         text-decoration: none;
       }
 
-      .contact-list span {
-        color: #c8d2dd;
+      .contact-link:hover,
+      .contact-link:focus-visible {
+        background: rgba(255, 250, 240, 0.13);
+        color: #fffaf0;
       }
 
-      .site-footer {
-        width: min(1160px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 24px 0 34px;
-        color: #c8d2dd;
-        font-size: 13px;
+      @media (max-width: 1040px) {
+        .principles-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .writing-grid {
+          grid-template-columns: 1fr;
+        }
       }
 
       @media (max-width: 860px) {
@@ -542,48 +818,80 @@
         }
 
         .nav-links {
+          flex-wrap: wrap;
           justify-content: flex-end;
-          gap: 12px;
+          gap: 10px 12px;
           font-size: 13px;
         }
 
-        .nav-links a:nth-child(2),
-        .nav-links a:nth-child(3) {
-          display: none;
-        }
-
         .hero {
-          min-height: auto;
+          min-height: calc(100vh - 180px);
         }
 
         .hero-inner {
-          min-height: 760px;
-          padding-top: 68px;
+          min-height: calc(100vh - 180px);
+          padding: 52px 0 58px;
         }
 
         .hero::after {
           background:
-            linear-gradient(180deg, rgba(247, 241, 228, 0.96), rgba(247, 241, 228, 0.78) 58%, rgba(247, 241, 228, 0.2)),
-            linear-gradient(90deg, rgba(247, 241, 228, 0.78), rgba(247, 241, 228, 0.34));
+            linear-gradient(180deg, rgba(247, 241, 228, 0.97), rgba(247, 241, 228, 0.8) 58%, rgba(247, 241, 228, 0.2)),
+            linear-gradient(90deg, rgba(247, 241, 228, 0.8), rgba(247, 241, 228, 0.34));
         }
 
         .hero-ledger,
-        .pillars,
-        .writing-grid,
-        .principles-grid,
-        .statement-grid,
-        .about-grid,
-        .contact-panel,
+        .story-grid,
+        .about-editorial-intro,
+        .point-layout,
+        .principles-editorial,
+        .final-panel,
         .section-heading {
           grid-template-columns: 1fr;
         }
 
+        .about-title-block {
+          position: static;
+        }
+
+        .bio-facts {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
         .principles-grid {
-          gap: 10px;
+          grid-auto-flow: row;
+          grid-template-columns: 1fr;
+          grid-template-rows: none;
+          gap: 0;
         }
 
         .section-inner {
           padding: 64px 0;
+        }
+
+        h1 {
+          max-width: 720px;
+          font-size: clamp(48px, 9vw, 58px);
+        }
+
+        .section-heading h2 {
+          font-size: 40px;
+        }
+
+        .point-of-view-band {
+          padding-top: 64px;
+          padding-bottom: 68px;
+        }
+
+        .final-panel {
+          gap: 46px;
+          padding-bottom: 58px;
+        }
+
+        .contact-panel {
+          border-top: 1px solid rgba(255, 250, 240, 0.22);
+          border-left: 0;
+          padding-top: 42px;
+          padding-left: 0;
         }
       }
 
@@ -592,41 +900,98 @@
           font-size: 15px;
         }
 
+        h1 {
+          font-size: 40px;
+        }
+
         .brand {
           gap: 8px;
         }
 
-        .nav-links a:nth-child(4) {
-          display: none;
+        .nav {
+          display: grid;
+        }
+
+        .nav-links {
+          justify-content: flex-start;
         }
 
         .hero-inner {
-          min-height: 720px;
+          min-height: calc(100vh - 180px);
         }
 
         .hero-actions {
           display: grid;
+          justify-items: stretch;
         }
 
-        .button {
+        .button:not(.tertiary) {
           width: 100%;
+        }
+
+        .button.tertiary {
+          justify-self: start;
         }
 
         .hero-ledger {
           margin-top: 34px;
         }
 
+        .hero-copy {
+          font-size: 18px;
+        }
+
+        .section-heading h2 {
+          font-size: 34px;
+        }
+
+        .contact-panel h2 {
+          font-size: 38px;
+        }
+
         .ledger-item,
-        .pillar,
-        .writing-card,
-        .principle,
-        .contact-panel {
+        .writing-card {
           padding: 20px;
         }
 
-        .manifesto li {
+        .about-home .section-inner {
+          padding-top: 72px;
+        }
+
+        .about-stack {
+          gap: 64px;
+        }
+
+        .bio-facts {
           grid-template-columns: 1fr;
-          gap: 6px;
+          gap: 12px;
+        }
+
+        .bio-facts span {
+          border-left: 0;
+          border-top: 1px solid rgba(19, 32, 51, 0.12);
+          padding: 12px 0 0;
+        }
+
+        .bio-facts span:first-child {
+          border-top: 0;
+          padding-top: 0;
+        }
+
+        .point-question {
+          padding-left: 18px;
+        }
+
+        .contact .section-inner {
+          padding-top: 64px;
+        }
+
+        .final-panel {
+          padding-bottom: 44px;
+        }
+
+        .life-reminder .quote-text {
+          font-size: clamp(30px, 8vw, 38px);
         }
       }
     </style>
@@ -636,13 +1001,14 @@
       <nav class="nav" aria-label="Main navigation">
         <a class="brand" href="#top" aria-label="Aylwin Wan home">
           <span class="brand-mark">AW</span>
-          <span>Aylwin Wan</span>
+          <span data-content="brand.name">Aylwin Wan</span>
         </a>
-        <div class="nav-links">
-          <a href="#why">Why</a>
-          <a href="#pillars">Pillars</a>
+        <div class="nav-links" data-list="navigation">
+          <a href="#top" aria-current="page">Home</a>
+          <a href="road-to-life-architecture.html">Journey</a>
+          <a href="#frameworks">Frameworks</a>
           <a href="#writing">Writing</a>
-          <a href="#about">About</a>
+          <a href="#about-aylwin">About Aylwin</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -659,135 +1025,150 @@
           />
         </div>
         <div class="hero-inner">
-          <p class="kicker">Public life home</p>
-          <h1 id="hero-title">Aylwin Wan</h1>
-          <p class="hero-copy">
-            Business architecture, life design, exploration, and thoughtful
-            long-term building. A public home for selected thinking, useful
-            frameworks, and meaningful connection.
+          <p class="kicker" data-content="hero.kicker">SELECTED THINKING</p>
+          <h1 id="hero-title" data-content="hero.headline">
+            Exploring how life can be designed with more clarity, freedom and
+            meaning.
+          </h1>
+          <p class="hero-copy" data-content="hero.subheadline">
+            Aylwin uses business architecture and structured thinking to explore
+            frameworks that help people see more clearly and make better
+            decisions—in both work and in life.
           </p>
           <div class="hero-actions" aria-label="Primary links">
-            <a class="button" href="#contact">Start a thoughtful conversation</a>
-            <a class="button secondary" href="#writing">Read selected thinking</a>
+            <a class="button" href="#frameworks" data-content="hero.primaryCta.label" data-link="hero.primaryCta.href">
+              Explore the frameworks
+            </a>
+            <a class="button secondary" href="#writing" data-content="hero.secondaryCta.label" data-link="hero.secondaryCta.href">
+              Read my writing
+            </a>
+            <a
+              class="button tertiary"
+              href="https://jp.linkedin.com/in/aylwinwan"
+              target="_blank"
+              rel="noopener"
+              data-content="hero.tertiaryCta.label"
+              data-link="hero.tertiaryCta.href"
+            >
+              Connect on LinkedIn
+            </a>
           </div>
-          <div class="hero-ledger" aria-label="Current public focus">
+          <div class="hero-ledger" data-list="hero.ledger" aria-label="Current public focus">
             <div class="ledger-item">
               <span class="ledger-label">Craft</span>
               <strong>Business architecture and transformation clarity</strong>
             </div>
             <div class="ledger-item">
               <span class="ledger-label">Practice</span>
-              <strong>Life systems for career, family, learning, and meaning</strong>
+              <strong>Life architecture, learning, family, and meaning</strong>
             </div>
             <div class="ledger-item">
-              <span class="ledger-label">Direction</span>
-              <strong>Building publicly, claiming the future only when true</strong>
+              <span class="ledger-label">Boundary</span>
+              <strong>Public signal, private machinery, quiet build</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="statement" id="why" aria-labelledby="why-title">
+      <section class="story" id="story" aria-labelledby="story-title">
         <div class="section-inner">
           <div class="section-heading">
             <div>
-              <p class="kicker">Why this exists</p>
-              <h2 id="why-title">A signal, not a performance.</h2>
+              <p class="kicker" data-content="story.kicker">Journey</p>
+              <h2 id="story-title" data-content="story.title">Why this site exists.</h2>
             </div>
-            <p>
-              This site is a calm, evolving place for professional architecture,
-              personal philosophy, writing, curiosity, and long-term life design.
-              It is built for thoughtful people, meaningful opportunities, future
-              collaborators, and eventually as a record for Aylwin's two sons.
-            </p>
           </div>
 
-          <div class="statement-grid">
-            <ul class="manifesto" aria-label="Public presence principles">
-              <li>
-                <span>Show</span>
-                <p>the thinking, history, values, and useful frameworks.</p>
-              </li>
-              <li>
-                <span>Protect</span>
-                <p>
-                  employer-confidential work, private family details, personal
-                  finances, and unvalidated future plans.
-                </p>
-              </li>
-              <li>
-                <span>Invite</span>
-                <p>
-                  senior decision-makers, collaborators, thoughtful readers, and
-                  quality people beyond the current physical world.
-                </p>
-              </li>
-              <li>
-                <span>Build</span>
-                <p>
-                  credibility beyond titles, LinkedIn, and company names through
-                  clarity, evidence, curiosity, and care.
-                </p>
-              </li>
-            </ul>
-            <aside class="field-note" aria-label="Public motto">
+          <div class="story-grid">
+            <div class="story-copy" data-list="story.paragraphs">
               <p>
-                Celebrate the history. Enjoy the present. Plan and build
-                quietly. Only claim the future once it becomes truth.
+                I was trained in physics and built my career through business
+                analysis, digital transformation, and business architecture.
+                Today, I work at the intersection of strategy, operating models,
+                technology, and human decision-making.
               </p>
+              <p>
+                Over time, I became interested in a bigger question: if
+                organisations need architecture to reduce complexity and improve
+                clarity, why don't our lives need architecture too?
+              </p>
+              <p>
+                This site is where I collect and share selected thinking on
+                business, life, learning, travel, and meaning.
+              </p>
+              <p>
+                Many dots. One thread. This is where I trace that thread through
+                work, family, learning, travel, and the continuing attempt to
+                build a life with more clarity, freedom, memory, and meaning.
+              </p>
+            </div>
+            <aside class="field-note" aria-label="Road to business architecture">
+              <span class="eyebrow" data-content="story.roadCard.label">Know the road.</span>
+              <h3 data-content="story.roadCard.title">Many dots. One thread.</h3>
+              <div class="story-preview-copy" data-rich-content="story.roadCard.copy">
+                <p>
+                  Before I began designing frameworks for life, I spent years
+                  designing systems for organisations.
+                </p>
+                <p>Looking back, the same thread had always been there.</p>
+                <p>
+                  This is the story of how structured thinking became the bridge
+                  between physics, business analysis, transformation, business
+                  architecture and life design.
+                </p>
+              </div>
+              <a
+                class="button secondary"
+                href="road-to-life-architecture.html"
+                data-content="story.roadCard.cta"
+                data-link="story.roadCard.href"
+              >
+                Read the story
+              </a>
             </aside>
           </div>
         </div>
       </section>
 
-      <section id="pillars" aria-labelledby="pillars-title">
+      <section class="frameworks" id="frameworks" aria-labelledby="frameworks-title">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading section-heading-single">
             <div>
-              <p class="kicker">What belongs here</p>
-              <h2 id="pillars-title">Three public pillars.</h2>
+              <p class="kicker" data-content="frameworks.kicker">THINKING TOOLS</p>
+              <h2 id="frameworks-title" data-content="frameworks.title">Frameworks for clearer living.</h2>
             </div>
-            <p>
-              The first version is intentionally simple: one public homepage that
-              can later grow into a knowledge garden, advisory platform, life
-              dashboard, travel product, or legacy archive without losing its
-              centre.
-            </p>
           </div>
 
-          <div class="pillars">
-            <article class="pillar">
-              <span class="pillar-number">01</span>
-              <div>
-                <h3>Business Architecture</h3>
+          <p class="frameworks-intro" data-content="frameworks.intro">
+            I'm building a collection of practical frameworks for thinking,
+            managing life intentionally, and focusing on what matters most.
+          </p>
+
+          <div class="framework-grid" data-list="frameworks.cards">
+            <article class="framework-card">
+              <div class="framework-card-header">
+                <h3>The Happiness Equation</h3>
+                <span class="status-badge">In Progress</span>
+              </div>
+              <div class="framework-copy">
+                <p>I began developing the Happiness Equation for a personal reason.</p>
                 <p>
-                  Strategy visualisation, operating model thinking, stakeholder
-                  alignment, decision quality, and lessons from complex
-                  organisations, always in public-safe language.
+                  Originally, I wanted a reminder that money is a powerful
+                  tool—but never the destination.
+                </p>
+                <p>
+                  Financial freedom creates options. Options create opportunities
+                  for meaningful experiences. Those experiences become richer
+                  when shared through genuine human connections.
+                </p>
+                <p>
+                  The Happiness Equation is my attempt to capture that balance
+                  and create a practical north star for life—one that helps me
+                  stay focused on what truly matters while filtering out the
+                  noise of everyday life.
                 </p>
               </div>
-            </article>
-            <article class="pillar">
-              <span class="pillar-number">02</span>
-              <div>
-                <h3>Life Design</h3>
-                <p>
-                  The architecture of a better life across career, family,
-                  learning, health, money, meaning, and legacy, approached with
-                  humility rather than certainty.
-                </p>
-              </div>
-            </article>
-            <article class="pillar">
-              <span class="pillar-number">03</span>
-              <div>
-                <h3>Exploration & Learning</h3>
-                <p>
-                  Travel, culture, cities, infrastructure, nature, memory,
-                  philosophy, AI, and the deeper patterns that help people live
-                  and decide more intentionally.
-                </p>
-              </div>
+              <p class="framework-note">More coming soon.</p>
             </article>
           </div>
         </div>
@@ -795,155 +1176,243 @@
 
       <section class="writing" id="writing" aria-labelledby="writing-title">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading section-heading-single">
             <div>
-              <p class="kicker">Selected thinking</p>
-              <h2 id="writing-title">Writing will be curated, not dumped.</h2>
+              <p class="kicker" data-content="writing.kicker">Writing</p>
+              <h2 id="writing-title" data-content="writing.title">Selected Public Thinking.</h2>
             </div>
-            <p>
-              The site should first showcase selected public writing: major
-              LinkedIn posts, published articles, essays, diagrams, frameworks,
-              and notes. The aim is resonance and trust, not volume.
-            </p>
           </div>
 
-          <div class="writing-grid">
+          <div class="writing-grid" data-list="writing.cards">
             <article class="writing-card">
-              <h3>Business architecture and transformation</h3>
+              <span class="eyebrow">Business Architecture</span>
+              <h3>Business Architecture as a Service</h3>
               <p>
-                Public-safe essays and diagrams on strategic alignment, operating
-                models, complexity, decision-making, and making organisations
-                easier to understand.
+                How business architecture can become a lightweight service that
+                improves clarity, prioritisation, and transformation alignment.
               </p>
-              <small>Links to add before launch</small>
+              <a class="button secondary" href="https://www.linkedin.com/in/aylwinwan/recent-activity/articles/">Read on LinkedIn</a>
             </article>
             <article class="writing-card">
-              <h3>Life architecture and family legacy</h3>
+              <span class="eyebrow">Life Architecture</span>
+              <h3>Life architecture as a personal operating system</h3>
               <p>
-                Reflections on building a life with structure, curiosity,
-                ambition, family, evidence, and humility, without pretending the
-                answers are finished.
+                Reflections on decision-making, personal systems, career optionality,
+                family, learning, freedom, and living with intention.
               </p>
-              <small>Links to add before launch</small>
+              <span class="button secondary disabled" aria-disabled="true">Upcoming</span>
             </article>
             <article class="writing-card">
-              <h3>Exploration, travel, and meaning</h3>
+              <span class="eyebrow">Exploration</span>
+              <h3>Deep travel as a way of seeing</h3>
               <p>
-                Notes on culture, places, systems, history, memory, and the kind
-                of travel that changes what a person notices.
+                Reflections on culture, cities, nature, art, meaningful places,
+                and what travel teaches when it goes beyond itinerary planning.
               </p>
-              <small>Future direction</small>
-            </article>
-            <article class="writing-card">
-              <h3>Tools, dashboards, and knowledge gardens</h3>
-              <p>
-                The practical side of life design: frameworks, personal systems,
-                and eventual public tools once they are real enough to share.
-              </p>
-              <small>Future direction</small>
+              <span class="button secondary disabled" aria-disabled="true">Upcoming</span>
             </article>
           </div>
         </div>
       </section>
 
-      <section aria-labelledby="principles-title">
+      <section class="about-home" id="about-aylwin" aria-labelledby="about-aylwin-title">
         <div class="section-inner">
-          <div class="section-heading">
-            <div>
-              <p class="kicker">How it should feel</p>
-              <h2 id="principles-title">Sharp. Curious. Trustworthy. Calm. Expansive.</h2>
-            </div>
-            <p>
-              The tone is modern philosopher-thinker plus explorer: minimal but
-              not empty, premium but not fake, intellectual but not academic,
-              personal but not soft, structured but not corporate.
-            </p>
-          </div>
+          <div class="about-stack">
+            <div class="about-editorial-intro" id="bio">
+              <div class="about-title-block">
+                <p class="kicker" data-content="aboutAylwin.kicker">About Aylwin</p>
+                <h2 id="about-aylwin-title" data-content="aboutAylwin.title">
+                  The person behind the thinking.
+                </h2>
+                <p class="about-identity">
+                  Hong Kong-born systems thinker, strategist and life-design explorer based in Tokyo.
+                </p>
+              </div>
 
-          <div class="principles-grid">
-            <article class="principle">
-              <h3>Clarity</h3>
-              <p>Make complex life and business questions easier to see.</p>
-            </article>
-            <article class="principle">
-              <h3>Systems</h3>
-              <p>Look for the architecture beneath decisions, habits, and work.</p>
-            </article>
-            <article class="principle">
-              <h3>Curiosity</h3>
-              <p>Keep learning across disciplines, cultures, tools, and places.</p>
-            </article>
-            <article class="principle">
-              <h3>Evidence</h3>
-              <p>Prefer what is lived, tested, observed, and honestly earned.</p>
-            </article>
-            <article class="principle">
-              <h3>Family</h3>
-              <p>Let ambition serve meaning, memory, and the people who matter.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" aria-labelledby="about-title">
-        <div class="section-inner">
-          <div class="about-grid">
-            <aside class="about-aside">
-              <p>
-                A strategist with a philosopher's heart and an explorer's soul.
-              </p>
-            </aside>
-            <div class="about-copy">
-              <p class="kicker">About</p>
-              <h2 id="about-title">Building the architecture of a better life in public.</h2>
-              <p>
-                Aylwin works at the intersection of business architecture,
-                transformation, decision-making, and practical life design. This
-                public home is not a claim that everything is figured out. It is
-                a place to share selected thinking while continuing to build with
-                structure, curiosity, evidence, family, ambition, and humility.
-              </p>
-              <p>
-                Over time, this may grow into a knowledge garden, advisory
-                practice, life dashboard product, deep travel tool, or legacy
-                archive. For now, the most important job is simpler: become a
-                trustworthy signal for people who value depth, clarity, and
-                meaningful work.
-              </p>
+              <div class="about-bio" aria-labelledby="about-aylwin-title">
+                <span class="eyebrow" data-content="aboutAylwin.bio.label">Bio</span>
+                <div class="about-copy-block" data-list="aboutAylwin.bio.paragraphs">
+                  <p>
+                    Aylwin Wan grew up in Hong Kong’s northern New Territories, in
+                    a family home under Hong Kong’s Home Ownership Scheme. He
+                    studied physics at The Chinese University of Hong Kong, where
+                    curiosity about how the world works gradually developed into
+                    an interest in how organisations, systems and people work.
+                  </p>
+                  <p>
+                    His career has taken him across manufacturing, aviation,
+                    telecommunications, consulting and insurance—through business
+                    analysis, digital transformation and, eventually, business
+                    architecture.
+                  </p>
+                  <p>
+                    In 2019, he moved from Hong Kong to Tokyo. Japan became not
+                    only the next chapter of his career, but also the place where
+                    he built a family and began thinking more deeply about
+                    identity, freedom, memory and the design of a meaningful life.
+                  </p>
+                  <p>
+                    Today, he lives in Tokyo with his wife, two sons and two cats.
+                    Outside work, he is drawn to travel, cities, history, art,
+                    music, technology and the continuing attempt to understand how
+                    the different parts of life fit together.
+                  </p>
+                </div>
+                <div class="bio-facts" data-list="aboutAylwin.bio.facts">
+                  <span>Hong Kong → Tokyo</span>
+                  <span>Physics → Business Architecture</span>
+                  <span>5 industries</span>
+                  <span>Father of two · Two cats</span>
+                </div>
+              </div>
             </div>
+
+            <section class="point-of-view-band" id="point-of-view" aria-labelledby="point-of-view-title">
+              <div class="point-layout">
+                <div>
+                  <span class="eyebrow" data-content="aboutAylwin.pointOfView.label">Point of View</span>
+                  <h3 id="point-of-view-title" data-content="aboutAylwin.pointOfView.title">
+                    A strategist with a philosopher’s heart and an explorer’s soul.
+                  </h3>
+                </div>
+                <div class="point-copy">
+                  <div class="about-copy-block" data-list="aboutAylwin.pointOfView.paragraphs">
+                    <p>
+                      I believe the world becomes easier to navigate when we learn to
+                      see the whole before rushing towards the parts.
+                    </p>
+                    <p>
+                      Over the past two decades, that belief has shaped my work
+                      across business analysis, digital transformation and business
+                      architecture. More recently, it has also begun shaping how I
+                      think about life itself.
+                    </p>
+                    <p>Today I explore a simple question:</p>
+                  </div>
+                </div>
+              </div>
+              <p class="point-question" data-content="aboutAylwin.pointOfView.question">
+                Can the same structured thinking that helps organisations make better decisions also help people design better lives?
+              </p>
+              <p class="point-closing" data-content="aboutAylwin.pointOfView.closing">
+                This website is where I share that ongoing exploration.
+              </p>
+            </section>
+
+            <section class="principles-editorial" id="operating-beliefs" aria-labelledby="operating-beliefs-title">
+              <div class="principles-header">
+                <span class="eyebrow" data-content="aboutAylwin.principles.label">Principles</span>
+                <h3 id="operating-beliefs-title" data-content="aboutAylwin.principles.title">Operating beliefs.</h3>
+              </div>
+              <div class="principles-grid" data-list="aboutAylwin.principles.items">
+                <article class="principle">
+                  <span class="principle-number">01</span>
+                  <h3>Clarity before speed</h3>
+                  <p>See the whole before acting or deciding.</p>
+                </article>
+                <article class="principle">
+                  <span class="principle-number">02</span>
+                  <h3>Architecture over noise</h3>
+                  <p>Look for the structure beneath complex problems.</p>
+                </article>
+                <article class="principle">
+                  <span class="principle-number">03</span>
+                  <h3>Truth over theatre</h3>
+                  <p>Prefer what is real, observed and tested over what merely looks convincing.</p>
+                </article>
+                <article class="principle">
+                  <span class="principle-number">04</span>
+                  <h3>Build quietly. Let reality speak.</h3>
+                  <p>Do the work first. Share what has become true rather than overselling the future.</p>
+                </article>
+                <article class="principle">
+                  <span class="principle-number">05</span>
+                  <h3>Family gives ambition its direction.</h3>
+                  <p>Let achievement serve the people, memories and relationships that make it worthwhile.</p>
+                </article>
+                <article class="principle">
+                  <span class="principle-number">06</span>
+                  <h3>Stay curious. Stay grounded.</h3>
+                  <p>Explore widely, question assumptions and bring what is learned back into practical life.</p>
+                </article>
+              </div>
+            </section>
+
           </div>
         </div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="section-inner">
-          <div class="contact-panel">
-            <div>
-              <p class="kicker">Contact</p>
-              <h2 id="contact-title">For thoughtful conversations and selected opportunities.</h2>
-              <p>
-                Career conversations, collaboration, writing, speaking, advisory,
-                future projects, and high-quality human connection all belong
-                here, as long as they are grounded, respectful, and real.
-              </p>
+          <div class="final-panel">
+            <div class="life-reminder" id="life-reminder" aria-labelledby="life-reminder-title">
+              <blockquote>
+                <span class="eyebrow" id="life-reminder-title" data-content="aboutAylwin.lifeReminder.label">A Life Reminder</span>
+                <p class="quote-text" data-content="aboutAylwin.lifeReminder.quote">
+                  “Life is the only physical window where we can love, laugh, forgive, touch, speak, act, and build memories together.”
+                </p>
+                <cite data-content="aboutAylwin.lifeReminder.attribution">— Aylwin Wan</cite>
+              </blockquote>
             </div>
-            <ul class="contact-list" aria-label="Contact options">
-              <li>
-                <span>Add preferred email before publishing</span>
-              </li>
-              <li>
-                <span>Add LinkedIn profile before publishing</span>
-              </li>
-              <li>
-                <span>Recommended domain: aylwinwan.com</span>
-              </li>
-            </ul>
+
+            <div class="contact-panel">
+              <p class="kicker" data-content="contact.kicker">CONTACT</p>
+              <h2 id="contact-title" data-content="contact.title">Continue the conversation.</h2>
+              <p data-content="contact.copy">
+                I’m always happy to exchange ideas about work and life—from
+                business architecture and enterprise transformation to life
+                design, life architecture and structured thinking.
+              </p>
+              <div class="contact-action">
+                <a
+                  class="contact-link"
+                  href="https://jp.linkedin.com/in/aylwinwan"
+                  target="_blank"
+                  rel="noopener"
+                  data-content="contact.cta.label"
+                  data-link="contact.cta.href"
+                >
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
-          <footer class="site-footer">
-            <span>© Aylwin Wan. Public thinking, private boundaries.</span>
+
+          <footer class="global-footer" data-common-footer>
+            <nav class="global-footer-nav" aria-label="Footer sitemap">
+              <ul class="global-footer-grid">
+                <li><a href="index.html#top">Home</a></li>
+                <li><a href="road-to-life-architecture.html">Journey</a></li>
+                <li><a href="index.html#frameworks">Frameworks</a></li>
+                <li>
+                  <a href="index.html#writing">Writing</a>
+                  <ul class="global-footer-links">
+                    <li><a href="index.html#writing">Business Architecture</a></li>
+                    <li><a href="index.html#writing">Life Architecture</a></li>
+                    <li><a href="index.html#writing">Exploration</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="index.html#about-aylwin">About Aylwin</a>
+                  <ul class="global-footer-links">
+                    <li><a href="index.html#bio">Bio</a></li>
+                    <li><a href="index.html#point-of-view">Point of View</a></li>
+                    <li><a href="index.html#operating-beliefs">Operating Beliefs</a></li>
+                    <li><a href="index.html#life-reminder">Life Reminder</a></li>
+                  </ul>
+                </li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="global-footer-signature">
+              <span>© Aylwin Wan</span>
+              <span class="global-footer-note">Exploring life through structured thinking.</span>
+            </div>
           </footer>
         </div>
       </section>
     </main>
+    <script src="assets/site.js" defer></script>
+    <script src="assets/common-footer.js" defer></script>
   </body>
 </html>

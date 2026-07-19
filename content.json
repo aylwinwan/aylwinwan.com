@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "title": "Aylwin Wan | Selected Thinking",
+    "description": "Aylwin Wan's personal website for selected thinking on business architecture, systems thinking, life architecture, learning, culture, and meaningful exploration."
+  },
+  "brand": {
+    "name": "Aylwin Wan",
+    "linkedinUrl": "https://jp.linkedin.com/in/aylwinwan"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "#top",
+      "active": true
+    },
+    {
+      "label": "Journey",
+      "href": "road-to-life-architecture.html"
+    },
+    {
+      "label": "Frameworks",
+      "href": "#frameworks"
+    },
+    {
+      "label": "Writing",
+      "href": "#writing"
+    },
+    {
+      "label": "About Aylwin",
+      "href": "#about-aylwin"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "kicker": "SELECTED THINKING",
+    "headline": "Exploring how life can be designed with more clarity, freedom and meaning.",
+    "subheadline": "Aylwin uses business architecture and structured thinking to explore frameworks that help people see more clearly and make better decisions—in both work and in life.",
+    "primaryCta": {
+      "label": "Explore the frameworks",
+      "href": "#frameworks"
+    },
+    "secondaryCta": {
+      "label": "Read my writing",
+      "href": "#writing"
+    },
+    "ledger": [
+      {
+        "label": "Craft",
+        "value": "Business architecture and transformation clarity"
+      },
+      {
+        "label": "Practice",
+        "value": "Life architecture, learning, family, and meaning"
+      },
+      {
+        "label": "Boundary",
+        "value": "Public signal, private machinery, quiet build"
+      }
+    ],
+    "tertiaryCta": {
+      "label": "Connect on LinkedIn",
+      "href": "https://jp.linkedin.com/in/aylwinwan"
+    }
+  },
+  "story": {
+    "kicker": "Journey",
+    "title": "Why this site exists.",
+    "paragraphs": [
+      "I was trained in physics and built my career through business analysis, digital transformation, and business architecture. Today, I work at the intersection of strategy, operating models, technology, and human decision-making.",
+      "Over time, I became interested in a bigger question: if organisations need architecture to reduce complexity and improve clarity, why don't our lives need architecture too?",
+      "This site is where I collect and share selected thinking on business, life, learning, travel, and meaning.",
+      "Many dots. One thread. This is where I trace that thread through work, family, learning, travel, and the continuing attempt to build a life with more clarity, freedom, memory, and meaning."
+    ],
+    "roadCard": {
+      "label": "Know the road.",
+      "title": "Many dots. One thread.",
+      "copy": "Before I began designing frameworks for life, I spent years designing systems for organisations.\n\nLooking back, the same thread had always been there.\n\nThis is the story of how structured thinking became the bridge between physics, business analysis, transformation, business architecture and life design.",
+      "cta": "Read the story",
+      "href": "road-to-life-architecture.html"
+    }
+  },
+  "writing": {
+    "kicker": "Writing",
+    "title": "Selected Public Thinking.",
+    "cards": [
+      {
+        "title": "Business Architecture as a Service",
+        "summary": "How business architecture can become a lightweight service that improves clarity, prioritisation, and transformation alignment.",
+        "category": "Business Architecture",
+        "cta": "Read on LinkedIn",
+        "url": "https://www.linkedin.com/in/aylwinwan/recent-activity/articles/"
+      },
+      {
+        "title": "Life architecture as a personal operating system",
+        "summary": "Reflections on decision-making, personal systems, career optionality, family, learning, freedom, and living with intention.",
+        "category": "Life Architecture",
+        "cta": "Upcoming",
+        "url": ""
+      },
+      {
+        "title": "Deep travel as a way of seeing",
+        "summary": "Reflections on culture, cities, nature, art, meaningful places, and what travel teaches when it goes beyond itinerary planning.",
+        "category": "Exploration",
+        "cta": "Upcoming",
+        "url": ""
+      }
+    ]
+  },
+  "aboutAylwin": {
+    "kicker": "About Aylwin",
+    "title": "The person behind the thinking.",
+    "bio": {
+      "label": "Bio",
+      "title": "A life across places, disciplines and perspectives.",
+      "paragraphs": [
+        "Aylwin Wan grew up in Hong Kong’s northern New Territories, in a family home under Hong Kong’s Home Ownership Scheme. He studied physics at The Chinese University of Hong Kong, where curiosity about how the world works gradually developed into an interest in how organisations, systems and people work.",
+        "His career has taken him across manufacturing, aviation, telecommunications, consulting and insurance—through business analysis, digital transformation and, eventually, business architecture.",
+        "In 2019, he moved from Hong Kong to Tokyo. Japan became not only the next chapter of his career, but also the place where he built a family and began thinking more deeply about identity, freedom, memory and the design of a meaningful life.",
+        "Today, he lives in Tokyo with his wife, two sons and two cats. Outside work, he is drawn to travel, cities, history, art, music, technology and the continuing attempt to understand how the different parts of life fit together."
+      ],
+      "facts": [
+        "Hong Kong → Tokyo",
+        "Physics → Business Architecture",
+        "5 industries",
+        "Father of two · Two cats"
+      ]
+    },
+    "pointOfView": {
+      "label": "Point of View",
+      "title": "A strategist with a philosopher’s heart and an explorer’s soul.",
+      "paragraphs": [
+        "I believe the world becomes easier to navigate when we learn to see the whole before rushing towards the parts.",
+        "Over the past two decades, that belief has shaped my work across business analysis, digital transformation and business architecture. More recently, it has also begun shaping how I think about life itself.",
+        "Today I explore a simple question:"
+      ],
+      "question": "Can the same structured thinking that helps organisations make better decisions also help people design better lives?",
+      "closing": "This website is where I share that ongoing exploration."
+    },
+    "principles": {
+      "label": "Principles",
+      "title": "Operating beliefs.",
+      "items": [
+        {
+          "title": "Clarity before speed",
+          "description": "See the whole before acting or deciding."
+        },
+        {
+          "title": "Architecture over noise",
+          "description": "Look for the structure beneath complex problems."
+        },
+        {
+          "title": "Truth over theatre",
+          "description": "Prefer what is real, observed and tested over what merely looks convincing."
+        },
+        {
+          "title": "Build quietly. Let reality speak.",
+          "description": "Do the work first. Share what has become true rather than overselling the future."
+        },
+        {
+          "title": "Family gives ambition its direction.",
+          "description": "Let achievement serve the people, memories and relationships that make it worthwhile."
+        },
+        {
+          "title": "Stay curious. Stay grounded.",
+          "description": "Explore widely, question assumptions and bring what is learned back into practical life."
+        }
+      ]
+    },
+    "lifeReminder": {
+      "label": "A Life Reminder",
+      "quote": "“Life is the only physical window where we can love, laugh, forgive, touch, speak, act, and build memories together.”",
+      "attribution": "— Aylwin Wan"
+    }
+  },
+  "contact": {
+    "kicker": "CONTACT",
+    "title": "Continue the conversation.",
+    "copy": "I’m always happy to exchange ideas about work and life—from business architecture and enterprise transformation to life design, life architecture and structured thinking.",
+    "cta": {
+      "label": "Connect on LinkedIn",
+      "href": "https://jp.linkedin.com/in/aylwinwan"
+    }
+  },
+  "frameworks": {
+    "kicker": "THINKING TOOLS",
+    "title": "Frameworks for clearer living.",
+    "intro": "I'm building a collection of practical frameworks for thinking, managing life intentionally, and focusing on what matters most.",
+    "cards": [
+      {
+        "title": "The Happiness Equation",
+        "status": "In Progress",
+        "paragraphs": [
+          "I began developing the Happiness Equation for a personal reason.",
+          "Originally, I wanted a reminder that money is a powerful tool—but never the destination.",
+          "Financial freedom creates options. Options create opportunities for meaningful experiences. Those experiences become richer when shared through genuine human connections.",
+          "The Happiness Equation is my attempt to capture that balance and create a practical north star for life—one that helps me stay focused on what truly matters while filtering out the noise of everyday life."
+        ],
+        "note": "More coming soon."
+      }
+    ]
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "The Road to Life Architecture | Aylwin Wan",
+    "description": "Aylwin Wan's story of how structured thinking became the thread through physics, technology, business analysis, transformation, business architecture, family, and life design."
+  },
+  "brand": {
+    "name": "Aylwin Wan",
+    "linkedinUrl": "https://jp.linkedin.com/in/aylwinwan"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "index.html#top"
+    },
+    {
+      "label": "Journey",
+      "href": "road-to-life-architecture.html",
+      "active": true
+    },
+    {
+      "label": "Frameworks",
+      "href": "index.html#frameworks"
+    },
+    {
+      "label": "Writing",
+      "href": "index.html#writing"
+    },
+    {
+      "label": "About Aylwin",
+      "href": "index.html#about-aylwin"
+    },
+    {
+      "label": "Contact",
+      "href": "index.html#contact"
+    }
+  ],
+  "hero": {
+    "kicker": "THE ROAD TO LIFE ARCHITECTURE",
+    "headline": "Many dots. One thread.",
+    "paragraphs": [
+      "Every career can look like a collection of unrelated decisions.",
+      "Looking back, mine was not.",
+      "Physics. Technology. Business analysis. Transformation. Business architecture. Family. Life design.",
+      "Different chapters. The same way of thinking."
+    ],
+    "scrollCue": {
+      "label": "Begin the journey",
+      "href": "#journey"
+    }
+  },
+  "journey": {
+    "kicker": "JOURNEY",
+    "title": "How the thread became a craft.",
+    "items": [
+      {
+        "number": "01",
+        "shortLabel": "Thread",
+        "anchorId": "thread",
+        "title": "Many dots. One thread.",
+        "paragraphs": [
+          "The road was never a perfectly planned ladder.",
+          "It emerged through curiosity, opportunity, mentors, experience and a habit of noticing patterns across different kinds of work.",
+          "Looking back, the individual decisions did not always appear connected. But the same instinct kept returning: understand the whole, find the structure beneath the noise and make complexity easier to navigate."
+        ],
+        "highlight": "The dots were different. The thread was already there."
+      },
+      {
+        "number": "02",
+        "shortLabel": "Lesson",
+        "anchorId": "lesson",
+        "title": "A lesson that shaped my thinking.",
+        "paragraphs": [
+          "In my twenties, a CEO I worked with taught me a lesson that stayed with me: do not rush towards solutions.",
+          "First, understand the whole. Break complexity into clarity. Connect ideas systematically. Then decide what should change.",
+          "At the time, I saw it as practical professional advice. Only later did I realise it had become the way I approached almost every difficult problem."
+        ],
+        "highlight": "Before solving the problem, learn to see the system."
+      },
+      {
+        "number": "03",
+        "shortLabel": "Craft",
+        "anchorId": "craft",
+        "title": "Structured thinking became a craft.",
+        "paragraphs": [
+          "As a business analyst, I worked across manufacturing, airlines, telecommunications, insurance and consulting.",
+          "Each industry had its own language, operating model, processes and technologies. Yet beneath those differences, I kept finding familiar patterns: unclear objectives, disconnected decisions, competing perspectives and solutions introduced before the underlying problem was understood.",
+          "Working across different environments taught me how to ask better questions, map complexity, connect strategy with execution and translate between people who saw the same system from different angles.",
+          "Structured thinking gradually stopped being only a professional skill."
+        ],
+        "highlight": "Through repeated practice, it became a craft."
+      },
+      {
+        "number": "04",
+        "shortLabel": "Architecture",
+        "anchorId": "architecture",
+        "title": "From business analysis to business architecture.",
+        "paragraphs": [
+          "Moving to Japan placed me in a new country, language and working environment, while allowing me to continue building my career in the insurance industry.",
+          "Over time, my perspective expanded. I moved from analysing individual requirements and solutions towards understanding broader business systems: strategy, value streams, capabilities, operating models, information, people and technology.",
+          "Business architecture gave a more complete language to something I had been practising for years—the discipline of seeing the whole and maintaining alignment across it."
+        ],
+        "highlight": "If organisations need architecture to remain aligned, why do we rarely apply the same thinking to our lives?"
+      },
+      {
+        "number": "05",
+        "shortLabel": "Fatherhood",
+        "anchorId": "fatherhood",
+        "title": "Becoming a father changed the question.",
+        "paragraphs": [
+          "The birth of my children quietly changed the way I thought about success.",
+          "Career progression and financial security still mattered, but they no longer felt sufficient on their own. I began thinking more seriously about time, health, presence, memory and the life my family was building together.",
+          "I also started asking questions for two different futures: the person I would eventually become, and the lives my children would one day build for themselves.",
+          "Questions emerged that no conventional career plan could answer:",
+          "What kind of memories are worth creating?",
+          "What choices should freedom make possible?",
+          "What kind of father do I hope they remember?",
+          "What might I pass on beyond money?"
+        ],
+        "highlight": "The question was no longer only how to build a career. It was how to build a life."
+      },
+      {
+        "number": "06",
+        "shortLabel": "Life Design",
+        "anchorId": "life-design",
+        "title": "Can life be designed?",
+        "paragraphs": [
+          "By then, I had spent years helping organisations understand complexity through business analysis, transformation and business architecture.",
+          "Yet I had never applied the same discipline fully to the person making my own decisions: myself.",
+          "I began wondering whether the methods used to clarify organisations could also help people understand their lives more holistically.",
+          "Could structured thinking reveal imbalance before it became regret?",
+          "Could architecture connect everyday choices with long-term purpose?",
+          "Could a clearer view of the whole help us make decisions with greater confidence?"
+        ],
+        "highlight": "If life cannot be controlled, perhaps it can still be understood, designed and continuously realigned."
+      },
+      {
+        "number": "07",
+        "shortLabel": "Unfolding",
+        "anchorId": "unfolding",
+        "title": "Still unfolding.",
+        "paragraphs": [
+          "I am still exploring the answer.",
+          "The frameworks I am building, including the Happiness Equation, are evolving attempts to see life more clearly, understand it as a connected whole and remain aligned with what matters through different seasons of life.",
+          "My hope is that these ideas can eventually help people:"
+        ],
+        "list": [
+          "see their lives with greater clarity and confidence;",
+          "understand the relationships between different parts of life;",
+          "make better decisions without losing sight of the whole;",
+          "maintain alignment as circumstances, priorities and identities change."
+        ],
+        "highlight": "The frameworks are still evolving. So is the life they are helping me design.",
+        "afterListParagraphs": [
+          "If these frameworks help someone filter out noise, recognise what matters and take one more intentional step, then sharing them is worthwhile."
+        ]
+      }
+    ],
+    "reflection": {
+      "quote": "We spend years learning how to build a career, but very little time learning how to design a life.",
+      "copy": "That is the question I am still exploring."
+    },
+    "continuation": {
+      "kicker": "THE JOURNEY CONTINUES",
+      "title": "From questions to frameworks.",
+      "copy": "The questions from this journey are gradually becoming practical frameworks for thinking, decision-making and life design.",
+      "cta": "Explore the frameworks →",
+      "href": "index.html#frameworks"
+    }
+  },
+  "image": {
+    "label": "VISUAL NOTE",
+    "title": "Thinking frameworks are cognitive compression tools.",
+    "copy": "The visual below is the working sketch behind this page. It shows how structured thinking compresses complexity into clarity—and clarity into better decisions.",
+    "src": "assets/road-to-life-architecture.png",
+    "alt": "Visual note showing how structured-thinking frameworks turn complexity into clarity and better decisions."
+  },
+  "closing": {
+    "title": "The tools may change. The question keeps widening.",
+    "copy": "Business architecture was an important chapter, but life architecture became the broader question: how structured thinking might help people build lives with more clarity, freedom, memory and meaning.",
+    "kicker": "THE WIDER QUESTION"
+  }
+}

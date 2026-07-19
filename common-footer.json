@@ -1,0 +1,64 @@
+{
+  "sitemap": [
+    {
+      "label": "Home",
+      "href": "index.html#top"
+    },
+    {
+      "label": "Journey",
+      "href": "road-to-life-architecture.html"
+    },
+    {
+      "label": "Frameworks",
+      "href": "index.html#frameworks"
+    },
+    {
+      "label": "Writing",
+      "href": "index.html#writing",
+      "children": [
+        {
+          "label": "Business Architecture",
+          "href": "index.html#writing"
+        },
+        {
+          "label": "Life Architecture",
+          "href": "index.html#writing"
+        },
+        {
+          "label": "Exploration",
+          "href": "index.html#writing"
+        }
+      ]
+    },
+    {
+      "label": "About Aylwin",
+      "href": "index.html#about-aylwin",
+      "children": [
+        {
+          "label": "Bio",
+          "href": "index.html#bio"
+        },
+        {
+          "label": "Point of View",
+          "href": "index.html#point-of-view"
+        },
+        {
+          "label": "Operating Beliefs",
+          "href": "index.html#operating-beliefs"
+        },
+        {
+          "label": "Life Reminder",
+          "href": "index.html#life-reminder"
+        }
+      ]
+    },
+    {
+      "label": "Contact",
+      "href": "index.html#contact"
+    }
+  ],
+  "signature": {
+    "name": "© Aylwin Wan",
+    "tagline": "Exploring life through structured thinking."
+  }
+}
