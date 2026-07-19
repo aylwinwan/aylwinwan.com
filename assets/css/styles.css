@@ -126,10 +126,10 @@
         width: 34px;
         height: 34px;
         overflow: hidden;
-        border: 1px solid var(--brand-gold);
-        border-radius: var(--radius);
-        background: var(--brand-blue);
-        box-shadow: 0 1px 0 rgba(1, 33, 105, 0.12);
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
       }
 
       .brand-mark img {
@@ -1182,10 +1182,10 @@
         width: 34px;
         height: 34px;
         overflow: hidden;
-        border: 1px solid var(--brand-gold);
-        border-radius: var(--radius);
-        background: var(--brand-blue);
-        box-shadow: 0 1px 0 rgba(1, 33, 105, 0.12);
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
       }
 
       body.page-journey .brand-mark img{
