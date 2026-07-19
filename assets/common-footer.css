@@ -1,0 +1,84 @@
+/* Shared footer: include this stylesheet and assets/common-footer.js on future pages. */
+.global-footer {
+  margin-top: 76px;
+  padding: 34px 0 34px;
+  border-top: 1px solid rgba(255, 250, 240, 0.2);
+  color: #fffaf0;
+}
+
+.global-footer a:focus-visible {
+  outline: 2px solid rgba(255, 250, 240, 0.75);
+  outline-offset: 4px;
+}
+
+.global-footer-nav ul,
+.global-footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.global-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.global-footer-grid > li > a {
+  color: #fffaf0;
+  font-size: 14px;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.global-footer-links {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.global-footer-links a {
+  color: #c8d2dd;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.global-footer a:hover {
+  color: #fffaf0;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 250, 240, 0.45);
+  text-underline-offset: 0.22em;
+}
+
+.global-footer-signature {
+  display: grid;
+  gap: 4px;
+  margin-top: 52px;
+  color: #fffaf0;
+  font-size: 13px;
+}
+
+.global-footer-note {
+  color: #aebccd;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media (max-width: 1040px) {
+  .global-footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .global-footer {
+    margin-top: 58px;
+    padding-top: 30px;
+  }
+
+  .global-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
