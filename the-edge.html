@@ -20,34 +20,13 @@
   </head>
   <body class="page-travel page-essay">
     <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main navigation" data-current-nav="writing" data-current-subnav="exploration">
         <a class="brand" href="index.html#top" aria-label="Aylwin Wan home">
           <span class="brand-mark" aria-hidden="true"><img src="assets/aw-logo.png" alt="" width="942" height="942" /></span>
           <span>Aylwin Wan</span>
         </a>
-        <div class="nav-links">
-          <a href="index.html#top">Home</a>
-          <a href="road-to-life-architecture.html">Journey</a>
-          <a href="index.html#frameworks">Frameworks</a>
-          <details class="nav-dropdown">
-            <summary aria-current="page">Writing</summary>
-            <div class="dropdown-menu">
-              <a href="index.html#business-architecture-writing">Business Architecture</a>
-              <a href="index.html#life-architecture-writing">Life Architecture</a>
-              <a href="travel-as-a-lens.html" aria-current="page">Exploration</a>
-            </div>
-          </details>
-          <details class="nav-dropdown">
-            <summary>About Aylwin</summary>
-            <div class="dropdown-menu">
-              <a href="index.html#bio">Bio</a>
-              <a href="index.html#point-of-view">Point of View</a>
-              <a href="index.html#principles">Principles</a>
-              <a href="index.html#life-reminder">Life Reminder</a>
-            </div>
-          </details>
-          <a href="index.html#contact">Contact</a>
-        </div>
+        <div class="nav-links site-nav-desktop" data-nav-desktop></div>
+        <div class="site-nav-mobile" data-nav-mobile></div>
       </nav>
     </header>
 
@@ -228,6 +207,7 @@
         </div>
       </section>
     </main>
+    <script src="assets/common-navigation.js?v=20260803" defer></script>
     <script src="assets/common-footer.js?v=20260802" defer></script>
   </body>
 </html>

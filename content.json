@@ -7,65 +7,6 @@
     "name": "Aylwin Wan",
     "linkedinUrl": "https://jp.linkedin.com/in/aylwinwan"
   },
-  "navigation": [
-    {
-      "label": "Home",
-      "href": "#top",
-      "active": true
-    },
-    {
-      "label": "Journey",
-      "href": "road-to-life-architecture.html"
-    },
-    {
-      "label": "Frameworks",
-      "href": "#frameworks"
-    },
-    {
-      "label": "Writing",
-      "href": "#writing",
-      "children": [
-        {
-          "label": "Business Architecture",
-          "href": "#business-architecture-writing"
-        },
-        {
-          "label": "Life Architecture",
-          "href": "#life-architecture-writing"
-        },
-        {
-          "label": "Exploration",
-          "href": "travel-as-a-lens.html"
-        }
-      ]
-    },
-    {
-      "label": "About Aylwin",
-      "href": "#about-aylwin",
-      "children": [
-        {
-          "label": "Bio",
-          "href": "#bio"
-        },
-        {
-          "label": "Point of View",
-          "href": "#point-of-view"
-        },
-        {
-          "label": "Principles",
-          "href": "#principles"
-        },
-        {
-          "label": "Life Reminder",
-          "href": "#life-reminder"
-        }
-      ]
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
-    }
-  ],
   "hero": {
     "kicker": "SELECTED THINKING",
     "headline": "Exploring how life can be designed with more clarity, freedom and meaning.",

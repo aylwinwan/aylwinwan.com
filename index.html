@@ -17,34 +17,13 @@
   </head>
   <body class="page-home">
     <header class="site-header">
-      <nav class="nav" aria-label="Main navigation">
-        <a class="brand" href="#top" aria-label="Aylwin Wan home">
+      <nav class="nav" aria-label="Main navigation" data-current-nav="home">
+        <a class="brand" href="index.html#top" aria-label="Aylwin Wan home">
           <span class="brand-mark" aria-hidden="true"><img src="assets/aw-logo.png" alt="" width="942" height="942" /></span>
           <span data-content="brand.name">Aylwin Wan</span>
         </a>
-        <div class="nav-links" data-list="navigation">
-          <a href="#top" aria-current="page">Home</a>
-          <a href="road-to-life-architecture.html">Journey</a>
-          <a href="#frameworks">Frameworks</a>
-          <details class="nav-dropdown">
-            <summary>Writing</summary>
-            <div class="dropdown-menu">
-              <a href="#business-architecture-writing">Business Architecture</a>
-              <a href="#life-architecture-writing">Life Architecture</a>
-              <a href="travel-as-a-lens.html">Exploration</a>
-            </div>
-          </details>
-          <details class="nav-dropdown">
-            <summary>About Aylwin</summary>
-            <div class="dropdown-menu">
-              <a href="#bio">Bio</a>
-              <a href="#point-of-view">Point of View</a>
-              <a href="#principles">Principles</a>
-              <a href="#life-reminder">Life Reminder</a>
-            </div>
-          </details>
-          <a href="#contact">Contact</a>
-        </div>
+        <div class="nav-links site-nav-desktop" data-nav-desktop></div>
+        <div class="site-nav-mobile" data-nav-mobile></div>
       </nav>
     </header>
 
@@ -441,6 +420,7 @@
       </section>
     </main>
     <script src="assets/site.js?v=20260802" defer></script>
+    <script src="assets/common-navigation.js?v=20260803" defer></script>
     <script src="assets/common-footer.js?v=20260802" defer></script>
   </body>
 </html>

@@ -7,65 +7,6 @@
     "name": "Aylwin Wan",
     "linkedinUrl": "https://jp.linkedin.com/in/aylwinwan"
   },
-  "navigation": [
-    {
-      "label": "Home",
-      "href": "index.html#top"
-    },
-    {
-      "label": "Journey",
-      "href": "road-to-life-architecture.html",
-      "active": true
-    },
-    {
-      "label": "Frameworks",
-      "href": "index.html#frameworks"
-    },
-    {
-      "label": "Writing",
-      "href": "index.html#writing",
-      "children": [
-        {
-          "label": "Business Architecture",
-          "href": "index.html#business-architecture-writing"
-        },
-        {
-          "label": "Life Architecture",
-          "href": "index.html#life-architecture-writing"
-        },
-        {
-          "label": "Exploration",
-          "href": "travel-as-a-lens.html"
-        }
-      ]
-    },
-    {
-      "label": "About Aylwin",
-      "href": "index.html#about-aylwin",
-      "children": [
-        {
-          "label": "Bio",
-          "href": "index.html#bio"
-        },
-        {
-          "label": "Point of View",
-          "href": "index.html#point-of-view"
-        },
-        {
-          "label": "Principles",
-          "href": "index.html#principles"
-        },
-        {
-          "label": "Life Reminder",
-          "href": "index.html#life-reminder"
-        }
-      ]
-    },
-    {
-      "label": "Contact",
-      "href": "index.html#contact"
-    }
-  ],
   "hero": {
     "kicker": "THE ROAD TO LIFE ARCHITECTURE",
     "headline": "Many dots. One thread.",
