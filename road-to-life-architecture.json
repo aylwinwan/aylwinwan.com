@@ -23,11 +23,43 @@
     },
     {
       "label": "Writing",
-      "href": "index.html#writing"
+      "href": "index.html#writing",
+      "children": [
+        {
+          "label": "Business Architecture",
+          "href": "index.html#business-architecture-writing"
+        },
+        {
+          "label": "Life Architecture",
+          "href": "index.html#life-architecture-writing"
+        },
+        {
+          "label": "Exploration",
+          "href": "travel-as-a-lens.html"
+        }
+      ]
     },
     {
       "label": "About Aylwin",
-      "href": "index.html#about-aylwin"
+      "href": "index.html#about-aylwin",
+      "children": [
+        {
+          "label": "Bio",
+          "href": "index.html#bio"
+        },
+        {
+          "label": "Point of View",
+          "href": "index.html#point-of-view"
+        },
+        {
+          "label": "Principles",
+          "href": "index.html#principles"
+        },
+        {
+          "label": "Life Reminder",
+          "href": "index.html#life-reminder"
+        }
+      ]
     },
     {
       "label": "Contact",

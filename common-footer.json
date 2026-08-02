@@ -26,7 +26,7 @@
         },
         {
           "label": "Exploration",
-          "href": "index.html#writing"
+          "href": "travel-as-a-lens.html"
         }
       ]
     },
@@ -43,8 +43,8 @@
           "href": "index.html#point-of-view"
         },
         {
-          "label": "Operating Beliefs",
-          "href": "index.html#operating-beliefs"
+          "label": "Principles",
+          "href": "index.html#principles"
         },
         {
           "label": "Life Reminder",
@@ -58,7 +58,7 @@
     }
   ],
   "signature": {
-    "name": "© Aylwin Wan",
+    "name": "\u00a9 Aylwin Wan",
     "tagline": "Exploring life through structured thinking."
   }
 }

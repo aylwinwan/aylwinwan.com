@@ -26,8 +26,23 @@
           <a href="#top" aria-current="page">Home</a>
           <a href="road-to-life-architecture.html">Journey</a>
           <a href="#frameworks">Frameworks</a>
-          <a href="#writing">Writing</a>
-          <a href="#about-aylwin">About Aylwin</a>
+          <details class="nav-dropdown">
+            <summary>Writing</summary>
+            <div class="dropdown-menu">
+              <a href="#business-architecture-writing">Business Architecture</a>
+              <a href="#life-architecture-writing">Life Architecture</a>
+              <a href="travel-as-a-lens.html">Exploration</a>
+            </div>
+          </details>
+          <details class="nav-dropdown">
+            <summary>About Aylwin</summary>
+            <div class="dropdown-menu">
+              <a href="#bio">Bio</a>
+              <a href="#point-of-view">Point of View</a>
+              <a href="#principles">Principles</a>
+              <a href="#life-reminder">Life Reminder</a>
+            </div>
+          </details>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -203,32 +218,26 @@
           </div>
 
           <div class="writing-grid" data-list="writing.cards">
-            <article class="writing-card">
+            <article class="writing-card" id="business-architecture-writing">
               <span class="eyebrow">Business Architecture</span>
-              <h3>Business Architecture as a Service</h3>
+              <h3>Business Architecture Accelerates Business Transformation</h3>
               <p>
                 How business architecture can become a lightweight service that
                 improves clarity, prioritisation, and transformation alignment.
               </p>
               <a class="button secondary" href="https://www.linkedin.com/in/aylwinwan/recent-activity/articles/">Read on LinkedIn</a>
             </article>
-            <article class="writing-card">
-              <span class="eyebrow">Life Architecture</span>
-              <h3>Life architecture as a personal operating system</h3>
-              <p>
-                Reflections on decision-making, personal systems, career optionality,
-                family, learning, freedom, and living with intention.
-              </p>
+            <article class="writing-card" id="life-architecture-writing">
+              <span class="eyebrow">LIFE ARCHITECTURE</span>
+              <h3>Life Architecture as a Personal Operating System</h3>
+              <p>If life is our only physical window, then designing it intentionally becomes one of our greatest responsibilities.</p>
               <span class="button secondary disabled" aria-disabled="true">Upcoming</span>
             </article>
             <article class="writing-card">
-              <span class="eyebrow">Exploration</span>
-              <h3>Deep travel as a way of seeing</h3>
-              <p>
-                Reflections on culture, cities, nature, art, meaningful places,
-                and what travel teaches when it goes beyond itinerary planning.
-              </p>
-              <span class="button secondary disabled" aria-disabled="true">Upcoming</span>
+              <span class="eyebrow">EXPLORATION</span>
+              <h3>Travel as a Lens</h3>
+              <p>Every journey explores how places, experiences and exploration quietly expanded the way I see the world—and the life design principles they revealed along the way.</p>
+              <a class="button secondary" href="travel-as-a-lens.html">Explore the Essays</a>
             </article>
           </div>
         </div>
@@ -318,10 +327,10 @@
               </p>
             </section>
 
-            <section class="principles-editorial" id="operating-beliefs" aria-labelledby="operating-beliefs-title">
+            <section class="principles-editorial" id="principles" aria-labelledby="principles-title">
               <div class="principles-header">
                 <span class="eyebrow" data-content="aboutAylwin.principles.label">Principles</span>
-                <h3 id="operating-beliefs-title" data-content="aboutAylwin.principles.title">Operating beliefs.</h3>
+                <h3 id="principles-title" data-content="aboutAylwin.principles.title">Operating beliefs.</h3>
               </div>
               <div class="principles-grid" data-list="aboutAylwin.principles.items">
                 <article class="principle">
@@ -408,7 +417,7 @@
                   <ul class="global-footer-links">
                     <li><a href="index.html#writing">Business Architecture</a></li>
                     <li><a href="index.html#writing">Life Architecture</a></li>
-                    <li><a href="index.html#writing">Exploration</a></li>
+                    <li><a href="travel-as-a-lens.html">Exploration</a></li>
                   </ul>
                 </li>
                 <li>
@@ -416,7 +425,7 @@
                   <ul class="global-footer-links">
                     <li><a href="index.html#bio">Bio</a></li>
                     <li><a href="index.html#point-of-view">Point of View</a></li>
-                    <li><a href="index.html#operating-beliefs">Operating Beliefs</a></li>
+                    <li><a href="index.html#principles">Principles</a></li>
                     <li><a href="index.html#life-reminder">Life Reminder</a></li>
                   </ul>
                 </li>
@@ -431,7 +440,7 @@
         </div>
       </section>
     </main>
-    <script src="assets/site.js" defer></script>
-    <script src="assets/common-footer.js" defer></script>
+    <script src="assets/site.js?v=20260802" defer></script>
+    <script src="assets/common-footer.js?v=20260802" defer></script>
   </body>
 </html>

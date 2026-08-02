@@ -23,11 +23,43 @@
     },
     {
       "label": "Writing",
-      "href": "#writing"
+      "href": "#writing",
+      "children": [
+        {
+          "label": "Business Architecture",
+          "href": "#business-architecture-writing"
+        },
+        {
+          "label": "Life Architecture",
+          "href": "#life-architecture-writing"
+        },
+        {
+          "label": "Exploration",
+          "href": "travel-as-a-lens.html"
+        }
+      ]
     },
     {
       "label": "About Aylwin",
-      "href": "#about-aylwin"
+      "href": "#about-aylwin",
+      "children": [
+        {
+          "label": "Bio",
+          "href": "#bio"
+        },
+        {
+          "label": "Point of View",
+          "href": "#point-of-view"
+        },
+        {
+          "label": "Principles",
+          "href": "#principles"
+        },
+        {
+          "label": "Life Reminder",
+          "href": "#life-reminder"
+        }
+      ]
     },
     {
       "label": "Contact",
@@ -87,25 +119,27 @@
     "title": "Selected Public Thinking.",
     "cards": [
       {
-        "title": "Business Architecture as a Service",
+        "title": "Business Architecture Accelerates Business Transformation",
         "summary": "How business architecture can become a lightweight service that improves clarity, prioritisation, and transformation alignment.",
         "category": "Business Architecture",
+        "anchorId": "business-architecture-writing",
         "cta": "Read on LinkedIn",
         "url": "https://www.linkedin.com/in/aylwinwan/recent-activity/articles/"
       },
       {
-        "title": "Life architecture as a personal operating system",
-        "summary": "Reflections on decision-making, personal systems, career optionality, family, learning, freedom, and living with intention.",
-        "category": "Life Architecture",
+        "title": "Life Architecture as a Personal Operating System",
+        "summary": "If life is our only physical window, then designing it intentionally becomes one of our greatest responsibilities.",
+        "category": "LIFE ARCHITECTURE",
+        "anchorId": "life-architecture-writing",
         "cta": "Upcoming",
         "url": ""
       },
       {
-        "title": "Deep travel as a way of seeing",
-        "summary": "Reflections on culture, cities, nature, art, meaningful places, and what travel teaches when it goes beyond itinerary planning.",
-        "category": "Exploration",
-        "cta": "Upcoming",
-        "url": ""
+        "title": "Travel as a Lens",
+        "summary": "Every journey explores how places, experiences and exploration quietly expanded the way I see the world—and the life design principles they revealed along the way.",
+        "category": "EXPLORATION",
+        "cta": "Explore the Essays",
+        "url": "travel-as-a-lens.html"
       }
     ]
   },
