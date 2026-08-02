@@ -63,12 +63,61 @@
 
     target.replaceChildren();
     items.forEach(function (item) {
+      if (Array.isArray(item.children) && item.children.length) {
+        var dropdown = createElement("details", "nav-dropdown");
+        var summary = createElement("summary", "", item.label);
+        if (item.active) {
+          summary.setAttribute("aria-current", "page");
+        }
+        dropdown.appendChild(summary);
+
+        var menu = createElement("div", "dropdown-menu");
+        item.children.forEach(function (child) {
+          var childLink = createElement("a", "", child.label);
+          childLink.href = child.href;
+          if (child.active) {
+            childLink.setAttribute("aria-current", "page");
+          }
+          menu.appendChild(childLink);
+        });
+        dropdown.appendChild(menu);
+        target.appendChild(dropdown);
+        return;
+      }
+
       var link = createElement("a", "", item.label);
       link.href = item.href;
       if (item.active) {
         link.setAttribute("aria-current", "page");
       }
       target.appendChild(link);
+    });
+  }
+
+  function initNavDropdowns() {
+    function closeAll(except) {
+      document.querySelectorAll(".nav-dropdown").forEach(function (dropdown) {
+        if (dropdown !== except) {
+          dropdown.removeAttribute("open");
+        }
+      });
+    }
+
+    document.querySelectorAll(".nav-dropdown summary").forEach(function (summary) {
+      summary.addEventListener("click", function () {
+        var activeDropdown = summary.closest(".nav-dropdown");
+        window.setTimeout(function () {
+          if (activeDropdown && activeDropdown.open) {
+            closeAll(activeDropdown);
+          }
+        }, 0);
+      });
+    });
+
+    document.querySelectorAll(".nav-dropdown a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeAll();
+      });
     });
   }
 
@@ -120,7 +169,12 @@
     target.replaceChildren();
     items.forEach(function (item) {
       var article = createElement("article", "writing-card");
-      article.appendChild(createElement("span", "eyebrow", item.category));
+      if (item.anchorId) {
+        article.id = item.anchorId;
+      }
+      var header = createElement("div", "writing-card-header");
+      header.appendChild(createElement("span", "eyebrow", item.category));
+      article.appendChild(header);
       article.appendChild(createElement("h3", "", item.title));
       article.appendChild(createElement("p", "", item.summary));
 
@@ -199,6 +253,7 @@
     bindLinks(content);
     renderNavigation(content.navigation);
     renderLedger(content.hero && content.hero.ledger);
+    initNavDropdowns();
     renderParagraphs("story.paragraphs", content.story && content.story.paragraphs);
     renderFrameworks(content.frameworks && content.frameworks.cards);
     renderWriting(content.writing && content.writing.cards);
