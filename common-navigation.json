@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "index.html#top"
+    },
+    {
+      "id": "journey",
+      "label": "Journey",
+      "href": "road-to-life-architecture.html"
+    },
+    {
+      "id": "frameworks",
+      "label": "Frameworks",
+      "href": "index.html#frameworks"
+    },
+    {
+      "id": "writing",
+      "label": "Writing",
+      "href": "index.html#writing",
+      "children": [
+        {
+          "id": "business-architecture",
+          "label": "Business Architecture",
+          "href": "index.html#business-architecture-writing"
+        },
+        {
+          "id": "life-architecture",
+          "label": "Life Architecture",
+          "href": "index.html#life-architecture-writing"
+        },
+        {
+          "id": "exploration",
+          "label": "Exploration",
+          "href": "travel-as-a-lens.html"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About Aylwin",
+      "href": "index.html#about-aylwin",
+      "children": [
+        {
+          "id": "bio",
+          "label": "Bio",
+          "href": "index.html#bio"
+        },
+        {
+          "id": "point-of-view",
+          "label": "Point of View",
+          "href": "index.html#point-of-view"
+        },
+        {
+          "id": "principles",
+          "label": "Principles",
+          "href": "index.html#principles"
+        },
+        {
+          "id": "life-reminder",
+          "label": "Life Reminder",
+          "href": "index.html#life-reminder"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "href": "index.html#contact"
+    }
+  ],
+  "desktopOrder": [
+    "home",
+    "writing",
+    "journey",
+    "frameworks",
+    "about",
+    "contact"
+  ],
+  "mobileOrder": [
+    "home",
+    "writing",
+    "journey",
+    "frameworks",
+    "about",
+    "contact"
+  ]
+}
