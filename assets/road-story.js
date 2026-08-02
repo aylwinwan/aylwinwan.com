@@ -38,71 +38,6 @@
     return node;
   }
 
-  function renderNavigation(items) {
-    var target = document.querySelector('[data-list="navigation"]');
-    if (!target || !Array.isArray(items)) {
-      return;
-    }
-
-    target.replaceChildren();
-    items.forEach(function (item) {
-      if (Array.isArray(item.children) && item.children.length) {
-        var dropdown = createElement("details", "nav-dropdown");
-        var summary = createElement("summary", "", item.label);
-        if (item.active) {
-          summary.setAttribute("aria-current", "page");
-        }
-        dropdown.appendChild(summary);
-
-        var menu = createElement("div", "dropdown-menu");
-        item.children.forEach(function (child) {
-          var childLink = createElement("a", "", child.label);
-          childLink.href = child.href;
-          if (child.active) {
-            childLink.setAttribute("aria-current", "page");
-          }
-          menu.appendChild(childLink);
-        });
-        dropdown.appendChild(menu);
-        target.appendChild(dropdown);
-        return;
-      }
-
-      var link = createElement("a", "", item.label);
-      link.href = item.href;
-      if (item.active) {
-        link.setAttribute("aria-current", "page");
-      }
-      target.appendChild(link);
-    });
-  }
-
-  function initNavDropdowns() {
-    function closeAll(except) {
-      document.querySelectorAll(".nav-dropdown").forEach(function (dropdown) {
-        if (dropdown !== except) {
-          dropdown.removeAttribute("open");
-        }
-      });
-    }
-
-    document.querySelectorAll(".nav-dropdown summary").forEach(function (summary) {
-      summary.addEventListener("click", function () {
-        var activeDropdown = summary.closest(".nav-dropdown");
-        window.setTimeout(function () {
-          if (activeDropdown && activeDropdown.open) {
-            closeAll(activeDropdown);
-          }
-        }, 0);
-      });
-    });
-
-    document.querySelectorAll(".nav-dropdown a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        closeAll();
-      });
-    });
-  }
 
   function renderParagraphList(path, items) {
     var target = document.querySelector('[data-list="' + path + '"]');
@@ -331,8 +266,6 @@
     bindText(content);
     bindLinks(content);
     bindImage(content);
-    renderNavigation(content.navigation);
-    initNavDropdowns();
     renderParagraphList("hero.paragraphs", content.hero && content.hero.paragraphs);
     renderChapterNavigation(content.journey && content.journey.items);
     renderJourney(content.journey && content.journey.items);

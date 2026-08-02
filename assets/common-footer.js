@@ -55,50 +55,6 @@
     });
   }
 
-  function initNavDropdowns() {
-    if (document.documentElement.dataset.navDropdownsReady === "true") {
-      return;
-    }
-    document.documentElement.dataset.navDropdownsReady = "true";
-
-    function closeAll(except) {
-      document.querySelectorAll(".nav-dropdown").forEach(function (dropdown) {
-        if (dropdown !== except) {
-          dropdown.removeAttribute("open");
-        }
-      });
-    }
-
-    document.addEventListener("click", function (event) {
-      var summary = event.target.closest(".nav-dropdown summary");
-      if (summary) {
-        var activeDropdown = summary.closest(".nav-dropdown");
-        window.setTimeout(function () {
-          if (activeDropdown.open) {
-            closeAll(activeDropdown);
-          }
-        }, 0);
-        return;
-      }
-
-      if (event.target.closest(".nav-dropdown a")) {
-        closeAll();
-        return;
-      }
-
-      if (!event.target.closest(".nav-dropdown")) {
-        closeAll();
-      }
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeAll();
-      }
-    });
-  }
-
-  initNavDropdowns();
 
   fetch(footerPath)
     .then(function (response) {
