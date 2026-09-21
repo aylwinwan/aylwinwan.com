@@ -18,11 +18,11 @@
       "children": [
         {
           "label": "Business Architecture",
-          "href": "index.html#writing"
+          "href": "writing/business-architecture/index.html"
         },
         {
           "label": "Life Architecture",
-          "href": "index.html#writing"
+          "href": "writing/life-architecture/index.html"
         },
         {
           "label": "Exploration",

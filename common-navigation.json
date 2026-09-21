@@ -23,12 +23,12 @@
         {
           "id": "business-architecture",
           "label": "Business Architecture",
-          "href": "index.html#business-architecture-writing"
+          "href": "writing/business-architecture/index.html"
         },
         {
           "id": "life-architecture",
           "label": "Life Architecture",
-          "href": "index.html#life-architecture-writing"
+          "href": "writing/life-architecture/index.html"
         },
         {
           "id": "exploration",
