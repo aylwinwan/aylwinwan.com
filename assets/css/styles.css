@@ -1835,16 +1835,22 @@
         position: fixed;
         inset: 0;
         z-index: 50;
+        overflow: auto;
         background: rgba(7, 13, 25, 0.86);
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
       }
 
       body.page-journey .lightbox-scroll{
         display: flex;
-        justify-content: safe center;
-        align-items: safe center;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+        width: max-content;
         min-width: 100%;
-        min-height: 100%;
-        overflow: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        overflow: visible;
         padding: 78px 32px 48px;
       }
 
