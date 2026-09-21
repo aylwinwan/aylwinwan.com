@@ -1,0 +1,108 @@
+{
+  "collections": [
+    {
+      "slug": "business-architecture",
+      "name": "Business Architecture",
+      "heading": "Making complexity visible.",
+      "intro": "Selected writing on business architecture, transformation, structured thinking and the visual tools that help organisations move from strategy to action.",
+      "pageTitle": "Business Architecture Writing | Aylwin Wan",
+      "description": "Selected writing by Aylwin Wan on business architecture, transformation, structured thinking, benefits mapping, clarity and organisational alignment.",
+      "closing": "This collection will continue to grow alongside my practice and thinking in business architecture and transformation.",
+      "articles": [
+        {
+          "id": "secret-power-of-diagrams",
+          "title": "The Secret Power of Diagrams",
+          "originalTitle": "The Secret Power of Diagrams: Essential Tools for Business Success in a Fast-Changing Environment",
+          "series": "Insights Series",
+          "category": "Business Architecture",
+          "type": "essay",
+          "author": "Aylwin Wan",
+          "date": "2025-01-09",
+          "readTime": null,
+          "excerpt": "How diagrams and benefits mapping make complex strategies easier to understand, connect individual efforts to shared goals, and create the conditions for meaningful discussion.",
+          "publicationNote": "An edited version focusing on benefits mapping was subsequently published in BA Digest Q3 2025.",
+          "image": "assets/writing/diagrams.jpg",
+          "imageAlt": "Crowds crossing Shibuya's intersecting pedestrian crossings beneath illuminated buildings at night.",
+          "imageWidth": 1166,
+          "imageHeight": 720,
+          "websiteUrl": null,
+          "linkedinUrl": "https://www.linkedin.com/pulse/secret-power-diagrams-essential-tools-business-success-aylwin-wan-kcknc/",
+          "externalPublication": "BA Digest",
+          "externalPublicationUrl": "https://www.blackmetric.com/ba-digest-q3-2025/",
+          "externalPublicationTitle": "The Secret Power of Diagrams: Using Benefits Mapping for Strategic Alignment",
+          "externalPublicationIssue": "Q3 2025",
+          "externalPublicationPages": "47-50",
+          "featured": true
+        },
+        {
+          "id": "core-values-business-architects",
+          "title": "Clarity, Alignment and Collaboration",
+          "originalTitle": "The Three Core Values Business Architects Bring: Clarity, Alignment, and Collaboration",
+          "series": "Insights Series",
+          "category": "Business Architecture",
+          "type": "essay",
+          "author": "Aylwin Wan",
+          "date": "2024-12-07",
+          "readTime": null,
+          "excerpt": "What do business architects bring to transformation? Familiar examples reveal how they help people understand the whole, move towards shared goals, and work better together.",
+          "image": "assets/writing/core-values.jpg",
+          "imageAlt": "Vaulted stone ceilings, tall columns and stained-glass windows inside Notre Dame in Paris.",
+          "imageWidth": 1080,
+          "imageHeight": 720,
+          "websiteUrl": null,
+          "linkedinUrl": "https://www.linkedin.com/pulse/three-core-values-business-architects-bring-clarity-alignment-wan-a54ic/",
+          "featured": false
+        }
+      ]
+    },
+    {
+      "slug": "life-architecture",
+      "name": "Life Architecture",
+      "heading": "Designing life with greater intention.",
+      "intro": "Selected writing on decisions, meaning, personal direction and the evolving idea that life itself can be approached with greater clarity and intention.",
+      "pageTitle": "Life Architecture & Life Design Writing | Aylwin Wan",
+      "description": "Selected writing by Aylwin Wan exploring life architecture, decision-making, meaning, personal direction and intentional life design.",
+      "closing": "Life Architecture is an evolving exploration rather than a finished system. These essays capture some of the questions and ideas that are shaping it.",
+      "articles": [
+        {
+          "id": "decisions-that-align-with-your-goals",
+          "title": "Making Decisions That Align with Your Goals",
+          "originalTitle": "Making Decisions That Align with Your Goals: Never Try to Turn Apple into Orange",
+          "series": "Ikigai Series",
+          "category": "Life Architecture",
+          "type": "essay",
+          "author": "Aylwin Wan",
+          "date": "2024-12-26",
+          "readTime": null,
+          "excerpt": "Every opportunity comes with trade-offs. A reflection on choosing environments that fit our goals, accepting their limitations, and making the most of what they offer.",
+          "image": "assets/writing/decisions.jpg",
+          "imageAlt": "Tokyo Tower glowing orange beyond an avenue lined with blue and white winter lights.",
+          "imageWidth": 1280,
+          "imageHeight": 720,
+          "websiteUrl": null,
+          "linkedinUrl": "https://www.linkedin.com/pulse/ikigai-seriesmaking-decisions-align-your-goals-never-try-aylwin-wan-ibirc/",
+          "featured": false
+        },
+        {
+          "id": "certainty-to-contribution",
+          "title": "Life's Journey: From Certainty to Contribution",
+          "originalTitle": "Life's Journey: From Certainty to Contribution",
+          "series": "Ikigai Series",
+          "category": "Life Architecture",
+          "type": "essay",
+          "author": "Aylwin Wan",
+          "date": "2024-12-14",
+          "readTime": null,
+          "excerpt": "An exploration of how our sense of direction evolves, from seeking certainty to considering what we can contribute.",
+          "image": "assets/writing/contribution.jpg",
+          "imageAlt": "The sun low over the sea beyond a winding coastal road and green hills.",
+          "imageWidth": 1280,
+          "imageHeight": 719,
+          "websiteUrl": null,
+          "linkedinUrl": "https://www.linkedin.com/pulse/ikigai-serieslifes-journey-from-certainty-contribution-aylwin-wan-re0dc/",
+          "featured": false
+        }
+      ]
+    }
+  ]
+}
