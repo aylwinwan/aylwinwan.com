@@ -1,5 +1,5 @@
 (function () {
-  var contentPath = "content.json";
+  var contentPath = "content.json?v=20260921-writing";
 
   function getValue(source, path) {
     return path.split(".").reduce(function (value, key) {

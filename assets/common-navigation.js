@@ -2,7 +2,12 @@
   // Shared navigation renderer. Future static pages use the same placeholders:
   // <div class="nav-links site-nav-desktop" data-nav-desktop></div>
   // <div class="site-nav-mobile" data-nav-mobile></div>
-  var navigationPath = "common-navigation.json";
+  var siteRoot = new URL("../", document.currentScript.src);
+  var navigationPath = new URL("common-navigation.json?v=20260921-writing", siteRoot).href;
+
+  function siteLink(path) {
+    return new URL(path, siteRoot).href;
+  }
   var fallbackNavigation = {
   "items": [
     {
@@ -28,12 +33,12 @@
         {
           "id": "business-architecture",
           "label": "Business Architecture",
-          "href": "index.html#business-architecture-writing"
+          "href": "writing/business-architecture/index.html"
         },
         {
           "id": "life-architecture",
           "label": "Life Architecture",
-          "href": "index.html#life-architecture-writing"
+          "href": "writing/life-architecture/index.html"
         },
         {
           "id": "exploration",
@@ -166,7 +171,7 @@
         var menu = createElement("div", "dropdown-menu");
         item.children.forEach(function (child) {
           var childLink = createElement("a", "", child.label);
-          childLink.href = child.href;
+          childLink.href = siteLink(child.href);
           if (isActive(child, active)) {
             childLink.setAttribute("aria-current", "page");
           }
@@ -178,7 +183,7 @@
       }
 
       var link = createElement("a", "", item.label);
-      link.href = item.href;
+      link.href = siteLink(item.href);
       if (isActive(item, active)) {
         link.setAttribute("aria-current", "page");
       }
@@ -238,7 +243,7 @@
         submenu.setAttribute("aria-label", item.label + " submenu");
         item.children.forEach(function (child) {
           var childLink = createElement("a", "", child.label);
-          childLink.href = child.href;
+          childLink.href = siteLink(child.href);
           if (isActive(child, active)) {
             childLink.setAttribute("aria-current", "page");
           }
@@ -247,7 +252,7 @@
         submenuRegion.appendChild(submenu);
       } else {
         var link = createElement("a", "mobile-nav-link", item.label);
-        link.href = item.href;
+        link.href = siteLink(item.href);
         if (isActive(item, active)) {
           link.setAttribute("aria-current", "page");
         }

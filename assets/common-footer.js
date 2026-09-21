@@ -1,7 +1,8 @@
 (function () {
   // Shared footer renderer. Future static pages only need the stylesheet,
   // this script, and <footer class="global-footer" data-common-footer></footer>.
-  var footerPath = "common-footer.json";
+  var siteRoot = new URL("../", document.currentScript.src);
+  var footerPath = new URL("common-footer.json?v=20260921-writing", siteRoot).href;
 
   function createElement(tag, className, text) {
     var node = document.createElement(tag);
@@ -19,7 +20,7 @@
     items.forEach(function (item) {
       var listItem = createElement("li");
       var link = createElement("a", "", item.label);
-      link.href = item.href;
+      link.href = new URL(item.href, siteRoot).href;
       listItem.appendChild(link);
 
       if (Array.isArray(item.children) && item.children.length) {
@@ -27,7 +28,7 @@
         item.children.forEach(function (child) {
           var childItem = createElement("li");
           var childLink = createElement("a", "", child.label);
-          childLink.href = child.href;
+          childLink.href = new URL(child.href, siteRoot).href;
           childItem.appendChild(childLink);
           children.appendChild(childItem);
         });
