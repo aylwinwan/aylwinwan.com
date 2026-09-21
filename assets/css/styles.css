@@ -609,6 +609,37 @@
         margin-top: 24px;
       }
 
+      .page-home .journey-thread {
+        margin: 24px 0 28px;
+        overflow-x: auto;
+        padding-bottom: 12px;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(247, 244, 236, .5) transparent;
+      }
+
+      .page-home .journey-thread-track { min-width: 420px; }
+      .page-home .journey-thread img { width: 100%; height: auto; }
+      .page-home .journey-thread ol { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0; }
+      .page-home .journey-thread li { padding: 0 4px; text-align: center; color: var(--brand-ivory); font-size: 13px; line-height: 1.4; }
+      .page-home .story .field-note { min-width: 0; width: 100%; background: rgba(247, 244, 236, 0.06); }
+      .page-home .story-copy { align-content: start; }
+      .page-home .framework-card:has(.framework-symbol) { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 22px; }
+      .page-home .framework-symbol { grid-column: 1; grid-row: 1; width: 96px; height: 96px; align-self: center; }
+      .page-home .framework-card:has(.framework-symbol) > .framework-card-header { grid-column: 2; align-self: center; }
+      .page-home .framework-card:has(.framework-symbol) > .framework-copy,
+      .page-home .framework-card:has(.framework-symbol) > .framework-note { grid-column: 1 / -1; }
+      .page-home .framework-card-header { flex-wrap: wrap; align-items: center; }
+      .page-home .frameworks-intro { max-width: none; width: 100%; }
+      .page-home .principle-symbol { width: 56px; height: 56px; }
+      .page-home .principle-heading-art { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+      .page-home .principle-heading-art .principle-number { margin: 0; }
+      .page-home .writing-card .button { min-width: 112px; justify-content: center; }
+      @media (max-width: 680px) {
+        .page-home .framework-card:has(.framework-symbol) { grid-template-columns: minmax(0, 1fr); }
+        .page-home .framework-symbol { grid-column: 1; grid-row: auto; width: 80px; height: 80px; margin-bottom: 16px; }
+        .page-home .framework-card:has(.framework-symbol) > :not(.framework-symbol) { grid-column: 1; }
+      }
+
       .frameworks {
         background: var(--paper);
       }
