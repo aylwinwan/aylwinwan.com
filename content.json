@@ -64,7 +64,8 @@
         "summary": "How business architecture can become a lightweight service that improves clarity, prioritisation, and transformation alignment.",
         "category": "Business Architecture",
         "anchorId": "business-architecture-writing",
-        "cta": "Explore Business Architecture",
+        "cta": "Explore",
+        "ctaLabel": "Explore Business Architecture",
         "url": "writing/business-architecture/index.html"
       },
       {
@@ -72,14 +73,16 @@
         "summary": "If life is our only physical window, then designing it intentionally becomes one of our greatest responsibilities.",
         "category": "LIFE ARCHITECTURE",
         "anchorId": "life-architecture-writing",
-        "cta": "Explore Life Architecture",
+        "cta": "Explore",
+        "ctaLabel": "Explore Life Architecture",
         "url": "writing/life-architecture/index.html"
       },
       {
         "title": "Travel as a Lens",
         "summary": "Every journey explores how places, experiences and exploration quietly expanded the way I see the world—and the life design principles they revealed along the way.",
         "category": "EXPLORATION",
-        "cta": "Explore the Essays",
+        "cta": "Explore",
+        "ctaLabel": "Explore Travel as a Lens",
         "url": "travel-as-a-lens.html"
       }
     ]
@@ -120,26 +123,32 @@
       "items": [
         {
           "title": "Clarity before speed",
+          "symbol": "assets/principle-clarity.svg",
           "description": "See the whole before acting or deciding."
         },
         {
           "title": "Architecture over noise",
+          "symbol": "assets/principle-architecture.svg",
           "description": "Look for the structure beneath complex problems."
         },
         {
           "title": "Truth over theatre",
+          "symbol": "assets/principle-truth.svg",
           "description": "Prefer what is real, observed and tested over what merely looks convincing."
         },
         {
           "title": "Build quietly. Let reality speak.",
+          "symbol": "assets/principle-building.svg",
           "description": "Do the work first. Share what has become true rather than overselling the future."
         },
         {
           "title": "Family gives ambition its direction.",
+          "symbol": "assets/principle-family.svg",
           "description": "Let achievement serve the people, memories and relationships that make it worthwhile."
         },
         {
           "title": "Stay curious. Stay grounded.",
+          "symbol": "assets/principle-curiosity.svg",
           "description": "Explore widely, question assumptions and bring what is learned back into practical life."
         }
       ]
@@ -166,6 +175,7 @@
     "cards": [
       {
         "title": "The Happiness Equation",
+        "symbol": "assets/happiness-symbol.svg?v=2",
         "status": "In Progress",
         "paragraphs": [
           "I began developing the Happiness Equation for a personal reason.",
