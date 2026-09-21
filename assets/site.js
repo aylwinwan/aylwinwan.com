@@ -1,5 +1,5 @@
 (function () {
-  var contentPath = "content.json?v=20260921-writing";
+  var contentPath = "content.json?v=20260921-home-symbols";
 
   function getValue(source, path) {
     return path.split(".").reduce(function (value, key) {
@@ -116,6 +116,9 @@
       if (item.url) {
         var link = createElement("a", "button secondary", item.cta || "Read");
         link.href = item.url;
+        if (item.ctaLabel) {
+          link.setAttribute("aria-label", item.ctaLabel);
+        }
         article.appendChild(link);
       } else {
         var status = createElement("span", "button secondary disabled", item.cta || "Upcoming");
@@ -135,6 +138,15 @@
     target.replaceChildren();
     items.forEach(function (item) {
       var article = createElement("article", "framework-card");
+      if (item.symbol) {
+        var symbol = createElement("img", "framework-symbol");
+        symbol.src = item.symbol;
+        symbol.alt = "";
+        symbol.width = 180;
+        symbol.height = 180;
+        symbol.setAttribute("aria-hidden", "true");
+        article.appendChild(symbol);
+      }
       var header = createElement("div", "framework-card-header");
       header.appendChild(createElement("h3", "", item.title));
       if (item.status) {
@@ -166,7 +178,18 @@
     target.replaceChildren();
     items.forEach(function (item, index) {
       var article = createElement("article", "principle");
-      article.appendChild(createElement("span", "principle-number", String(index + 1).padStart(2, "0")));
+      var art = createElement("div", "principle-heading-art");
+      art.appendChild(createElement("span", "principle-number", String(index + 1).padStart(2, "0")));
+      if (item.symbol) {
+        var symbol = createElement("img", "principle-symbol");
+        symbol.src = item.symbol;
+        symbol.alt = "";
+        symbol.width = 64;
+        symbol.height = 64;
+        symbol.setAttribute("aria-hidden", "true");
+        art.appendChild(symbol);
+      }
+      article.appendChild(art);
       article.appendChild(createElement("h3", "", item.title));
       article.appendChild(createElement("p", "", item.description));
       target.appendChild(article);
