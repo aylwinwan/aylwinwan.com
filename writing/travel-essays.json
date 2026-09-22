@@ -1,0 +1,85 @@
+[
+  {
+    "number": "01",
+    "title": "The Edge",
+    "status": "published",
+    "location": "Wakkanai, Japan",
+    "readingTime": "6 min",
+    "written": "August 2026",
+    "summary": "A largely unplanned journey to Japan’s northernmost point became an early lesson in curiosity and the boundaries we assume.",
+    "lens": "Curiosity takes us beyond the edges we assume—and reveals possibilities we couldn't see before.",
+    "principle": "Design for Curiosity",
+    "artwork": "edge",
+    "href": "the-edge.html"
+  },
+  {
+    "number": "02",
+    "title": "The World Before Us",
+    "status": "in-progress",
+    "location": "London, United Kingdom",
+    "summary": "A day at the British Museum revealed how the past gives us context that personal experience alone cannot provide.",
+    "lens": "Context takes us beyond what we can experience ourselves—and reveals the forces that shaped the world we inherited.",
+    "principle": "Design for Context",
+    "artwork": "context"
+  },
+  {
+    "number": "03",
+    "title": "The Colours I Never Knew Existed",
+    "status": "future",
+    "location": "Okinawa, Japan",
+    "summary": "Coral reefs and unfamiliar shades of blue revealed a world richer than I had ever learned to imagine.",
+    "lens": "The world is always richer than our imagination.",
+    "principle": "Design for Wonder",
+    "artwork": "wonder"
+  },
+  {
+    "number": "04",
+    "title": "Beyond My Starting Point",
+    "status": "future",
+    "location": "Great Ocean Road, Australia",
+    "summary": "A vast coastline opened the possibility that home, identity and the future could extend beyond where life began.",
+    "lens": "Sometimes a journey doesn't show us where to travel. It shows us where we might belong.",
+    "principle": "Design for Belonging",
+    "artwork": "belonging"
+  },
+  {
+    "number": "05",
+    "title": "Our First Long Journey Together",
+    "status": "future",
+    "location": "Aomori, Japan",
+    "summary": "Our first long family road trip turned exploration into something we could discover and remember together.",
+    "lens": "Happiness is often sharing a moment, not achieving one.",
+    "principle": "Design for Shared Experiences",
+    "artwork": "shared-experience"
+  },
+  {
+    "number": "06",
+    "title": "A Volcano Taught Me Gratitude",
+    "status": "future",
+    "location": "Mount Aso, Japan",
+    "summary": "Carrying my son beneath an ancient volcano became a reflection on time, fatherhood and the value of shared moments.",
+    "lens": "Time becomes meaningful through moments shared with the people we love.",
+    "principle": "Design for Presence",
+    "artwork": "presence"
+  },
+  {
+    "number": "07",
+    "title": "The Windows of a Life",
+    "status": "future",
+    "location": "Hong Kong",
+    "summary": "Returning home with my wife and children revealed life's changing seasons—and the opportunities that cannot wait.",
+    "lens": "Some things in life can wait. Some moments cannot.",
+    "principle": "Design for the Season",
+    "artwork": "season"
+  },
+  {
+    "number": "08",
+    "title": "Design for Options",
+    "status": "future",
+    "location": "Across Borders",
+    "summary": "Travel, career moves and immigration shared one ambition: creating the freedom to choose where to live, work, move—or stay.",
+    "lens": "Optionality turns constraint into choice—and gives us the freedom to move, stay or choose differently when life changes.",
+    "principle": "Design for Options",
+    "artwork": "options"
+  }
+]
