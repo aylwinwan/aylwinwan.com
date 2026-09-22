@@ -1,0 +1,141 @@
+body.page-travel .manifesto-subheading {
+  margin: 24px 0 0;
+  color: var(--brand-blue);
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+body.page-travel .manifesto-subheading::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-bottom: 14px;
+  background: var(--brand-red);
+}
+
+/* Shared editorial slots keep every card aligned, including unpublished essays. */
+body.page-travel .travel-essays > .section-inner {
+  width: min(1440px, calc(100% - 48px));
+}
+body.page-travel .essay-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+body.page-travel .essay-card {
+  display: grid;
+  grid-template-rows: 52px 110px 101px 78px 120px 173px 78px 46px;
+  gap: 18px;
+  min-width: 0;
+  min-height: 0;
+  overflow: visible;
+  padding: 24px;
+  background: #fbfaf6;
+  box-shadow: none;
+  isolation: isolate;
+}
+body.page-travel .essay-card::before,
+body.page-travel .essay-card-linkable::before {
+  height: 3px;
+  border-radius: 8px 8px 0 0;
+}
+body.page-travel .essay-card-linkable {
+  border-color: rgba(1, 33, 105, 0.36);
+  background: #fffefa;
+  box-shadow: 0 8px 22px rgba(1, 33, 105, 0.06);
+}
+body.page-travel .essay-card-linkable:hover {
+  border-color: var(--brand-blue);
+  box-shadow: 0 10px 26px rgba(1, 33, 105, 0.10);
+  transform: translateY(-2px);
+}
+body.page-travel .essay-card-header {
+  align-items: start;
+  gap: 8px;
+  min-height: 52px;
+}
+body.page-travel .essay-card .status-badge {
+  font-size: 10px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+body.page-travel .essay-number,
+body.page-travel .essay-published-date { letter-spacing: 0; }
+body.page-travel .essay-artwork {
+  display: block;
+  width: 100%;
+  height: 110px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+body.page-travel .essay-card h3 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.12;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+body.page-travel .essay-meta {
+  width: 100%;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 14px;
+}
+body.page-travel .essay-meta dt { line-height: 16px; }
+body.page-travel .essay-meta dd { font-size: 14px; line-height: 1.5; }
+body.page-travel .essay-meta dd { min-height: 42px; }
+body.page-travel .essay-card > p {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+body.page-travel .essay-card > p,
+body.page-travel .essay-lens p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+}
+body.page-travel .essay-lens,
+body.page-travel .essay-principle { width: 100%; padding-top: 18px; }
+body.page-travel .essay-lens > span,
+body.page-travel .essay-principle > span { display: block; line-height: 16px; }
+body.page-travel .essay-lens p { font-size: 19px; line-height: 26px; }
+body.page-travel .essay-principle { margin-top: 0; }
+body.page-travel .essay-principle strong { font-size: 15px; line-height: 1.5; }
+body.page-travel .essay-card .essay-card-cta,
+body.page-travel .essay-card-linkable .essay-card-cta {
+  width: 100%;
+  min-height: 46px;
+  margin: 0;
+  padding: 10px 12px;
+  box-shadow: none;
+}
+body.page-travel .essay-card-cta-unavailable {
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(1, 33, 105, 0.025);
+  color: var(--blue-muted);
+  opacity: 0.65;
+  text-decoration: none;
+  cursor: default;
+}
+@media (min-width: 1400px) {
+  body.page-travel .essay-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1023px) {
+  body.page-travel .essay-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 719px) {
+  body.page-travel .travel-essays > .section-inner { width: calc(100% - 32px); }
+  body.page-travel .essay-grid { grid-template-columns: minmax(0, 1fr); }
+  body.page-travel .essay-card { padding: 16px; }
+  body.page-travel .essay-principle { margin-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.page-travel .essay-card-linkable { transition: none; }
+  body.page-travel .essay-card-linkable:hover { transform: none; }
+}
