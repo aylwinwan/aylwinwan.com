@@ -611,18 +611,40 @@
 
       .page-home .journey-thread {
         margin: 24px 0 28px;
-        overflow-x: auto;
-        padding-bottom: 12px;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(247, 244, 236, .5) transparent;
       }
 
-      .page-home .journey-thread-track { min-width: 420px; }
+      .page-home .journey-thread-track { min-width: 0; }
       .page-home .journey-thread img { width: 100%; height: auto; }
       .page-home .journey-thread ol { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); list-style: none; padding: 0; margin: 0; }
-      .page-home .journey-thread li { padding: 0 4px; text-align: center; color: var(--brand-ivory); font-size: 13px; line-height: 1.4; }
-      .page-home .story .field-note { min-width: 0; width: 100%; background: rgba(247, 244, 236, 0.06); }
-      .page-home .story-copy { align-content: start; }
+      .page-home .journey-thread li { padding: 0; text-align: center; color: var(--brand-ivory); font-size: 12px; line-height: 1.4; }
+      .page-home .story-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 44px; }
+      .page-home .story .field-note { min-width: 0; width: 100%; padding: 24px; background: transparent; box-shadow: none; }
+      .page-home .story-copy { align-content: start; gap: 24px; }
+      .page-home .story-question { margin: 4px 0 8px; padding-left: 22px; border-left: 2px solid var(--brand-gold); font-family: var(--font-display); font-size: 28px; line-height: 1.4; color: var(--brand-ivory); }
+      .page-home .story .field-note p { font-family: var(--font-body); font-size: 18px; line-height: 1.65; }
+      .page-home .story-main { min-width: 0; }
+      .page-home .story-main .section-heading { display: block; }
+      .page-home .story-main h2 { font-size: 44px; line-height: 1.08; letter-spacing: 0; }
+      .page-home .story .field-note h3 { font-size: 34px; line-height: 1.12; letter-spacing: 0; }
+      .page-home .story > .section-inner > .kicker,
+      .page-home .story .field-note .eyebrow { font-size: 12px; line-height: 1.5; font-weight: 800; letter-spacing: 0; }
+      @media (max-width: 1180px) {
+        .page-home .story-grid { grid-template-columns: minmax(0, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .page-home .story-main h2 { font-size: 34px; }
+        .page-home .story .field-note h3 { font-size: 30px; }
+        .page-home .story .field-note { padding: 24px; }
+        .page-home .story-question { font-size: 25px; padding-left: 18px; }
+        .page-home .journey-thread img { display: none; }
+        .page-home .journey-thread ol { display: grid; grid-template-columns: 1fr; gap: 0; }
+        .page-home .journey-thread li { position: relative; text-align: left; padding: 0 0 20px 26px; margin-left: 5px; font-size: 14px; }
+        .page-home .journey-thread li::before { content: ""; position: absolute; left: -4px; top: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--brand-ivory); }
+        .page-home .journey-thread li:not(:last-child)::after { content: ""; position: absolute; left: -1px; top: 15px; bottom: -3px; border-left: 1px solid rgba(247, 244, 236, 0.4); }
+        .page-home .journey-thread li:last-child { padding-bottom: 0; }
+        .page-home .journey-thread li:last-child::before { background: var(--brand-red); outline: 1px solid var(--brand-ivory); outline-offset: 3px; }
+      }
+      .page-home .story .field-note > .button { display: flex; width: fit-content; margin-left: auto; margin-right: auto; }
       .page-home .framework-card:has(.framework-symbol) { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 22px; }
       .page-home .framework-symbol { grid-column: 1; grid-row: 1; width: 96px; height: 96px; align-self: center; }
       .page-home .framework-card:has(.framework-symbol) > .framework-card-header { grid-column: 2; align-self: center; }
