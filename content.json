@@ -167,21 +167,37 @@
     }
   },
   "frameworks": {
-    "kicker": "THINKING TOOLS",
-    "title": "Frameworks for clearer living.",
-    "intro": "I'm building a collection of practical frameworks for thinking, managing life intentionally, and focusing on what matters most.",
+    "kicker": "Life Architecture",
+    "title": "Architecture for a life well lived.",
+    "intro": "Life is made of interconnected choices.\n\nLife Architecture brings together Life Design Principles, the Happiness Equation and Life Capitals—three complementary perspectives for thinking about how we design our lives, what we are designing towards, and what we can build to make more of life possible.\n\nTogether, they offer a way to build life more intentionally.",
     "cards": [
       {
-        "title": "The Happiness Equation",
-        "symbol": "assets/happiness-symbol.svg?v=2",
-        "status": "In Progress",
+        "title": "Life Design Principles",
+        "symbol": "assets/life-principles-symbol.svg",
+        "question": "What guides our design?",
         "paragraphs": [
-          "I began developing the Happiness Equation for a personal reason.",
-          "Originally, I wanted a reminder that money is a powerful tool—but never the destination.",
-          "Financial freedom creates options. Options create opportunities for meaningful experiences. Those experiences become richer when shared through genuine human connections.",
-          "The Happiness Equation is my attempt to capture that balance and create a practical north star for life—one that helps me stay focused on what truly matters while filtering out the noise of everyday life."
+          "Eight principles to help us see more clearly, make better decisions, and design a more intentional life."
         ],
-        "note": "More coming soon."
+        "href": "frameworks/life-design-principles/index.html",
+        "cta": "Explore the principles →"
+      },
+      {
+        "title": "The Happiness Equation",
+        "symbol": "assets/happiness-symbol-gold.svg",
+        "question": "What are we designing for?",
+        "paragraphs": [
+          "A simple framework to remind us what truly contributes to a more fulfilling life."
+        ],
+        "note": "Coming Soon"
+      },
+      {
+        "title": "Life Capitals",
+        "symbol": "assets/life-capitals-symbol.svg",
+        "question": "What can we build to enable it?",
+        "paragraphs": [
+          "The key capitals we build and sustain can expand what becomes possible in life."
+        ],
+        "note": "Coming Soon"
       }
     ]
   }
