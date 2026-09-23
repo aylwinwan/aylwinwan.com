@@ -1,5 +1,5 @@
 (function () {
-  var contentPath = "content.json?v=20260921-home-symbols";
+  var contentPath = "content.json?v=20260923-journey-editorial";
 
   function getValue(source, path) {
     return path.split(".").reduce(function (value, key) {
@@ -210,7 +210,6 @@
     bindRichText(content);
     bindLinks(content);
     renderLedger(content.hero && content.hero.ledger);
-    renderParagraphs("story.paragraphs", content.story && content.story.paragraphs);
     renderFrameworks(content.frameworks && content.frameworks.cards);
     renderWriting(content.writing && content.writing.cards);
     renderParagraphs("aboutAylwin.bio.paragraphs", content.aboutAylwin && content.aboutAylwin.bio && content.aboutAylwin.bio.paragraphs);
