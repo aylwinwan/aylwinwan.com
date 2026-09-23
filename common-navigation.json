@@ -13,7 +13,24 @@
     {
       "id": "frameworks",
       "label": "Frameworks",
-      "href": "index.html#frameworks"
+      "href": "index.html#frameworks",
+      "children": [
+        {
+          "id": "life-design-principles",
+          "label": "Life Design Principles",
+          "href": "frameworks/life-design-principles/index.html"
+        },
+        {
+          "id": "happiness-equation",
+          "label": "The Happiness Equation",
+          "href": "index.html#frameworks"
+        },
+        {
+          "id": "life-capitals",
+          "label": "Life Capitals",
+          "href": "index.html#frameworks"
+        }
+      ]
     },
     {
       "id": "writing",
