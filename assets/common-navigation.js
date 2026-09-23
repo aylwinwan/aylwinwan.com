@@ -3,7 +3,7 @@
   // <div class="nav-links site-nav-desktop" data-nav-desktop></div>
   // <div class="site-nav-mobile" data-nav-mobile></div>
   var siteRoot = new URL("../", document.currentScript.src);
-  var navigationPath = new URL("common-navigation.json?v=20260921-writing", siteRoot).href;
+  var navigationPath = new URL("common-navigation.json?v=20260923-frameworks-menu", siteRoot).href;
 
   function siteLink(path) {
     return new URL(path, siteRoot).href;
@@ -23,7 +23,24 @@
     {
       "id": "frameworks",
       "label": "Frameworks",
-      "href": "index.html#frameworks"
+      "href": "index.html#frameworks",
+      "children": [
+        {
+          "id": "life-design-principles",
+          "label": "Life Design Principles",
+          "href": "frameworks/life-design-principles/index.html"
+        },
+        {
+          "id": "happiness-equation",
+          "label": "The Happiness Equation",
+          "href": "index.html#frameworks"
+        },
+        {
+          "id": "life-capitals",
+          "label": "Life Capitals",
+          "href": "index.html#frameworks"
+        }
+      ]
     },
     {
       "id": "writing",
