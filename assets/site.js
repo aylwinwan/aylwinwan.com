@@ -1,5 +1,5 @@
 (function () {
-  var contentPath = "content.json?v=20260923-journey-editorial";
+  var contentPath = "content.json?v=20260923-life-principles";
 
   function getValue(source, path) {
     return path.split(".").reduce(function (value, key) {
@@ -131,39 +131,28 @@
 
   function renderFrameworks(items) {
     var target = document.querySelector('[data-list="frameworks.cards"]');
-    if (!target || !Array.isArray(items)) {
-      return;
-    }
-
+    if (!target || !Array.isArray(items)) return;
     target.replaceChildren();
     items.forEach(function (item) {
-      var article = createElement("article", "framework-card");
-      if (item.symbol) {
-        var symbol = createElement("img", "framework-symbol");
-        symbol.src = item.symbol;
-        symbol.alt = "";
-        symbol.width = 180;
-        symbol.height = 180;
-        symbol.setAttribute("aria-hidden", "true");
-        article.appendChild(symbol);
-      }
-      var header = createElement("div", "framework-card-header");
-      header.appendChild(createElement("h3", "", item.title));
-      if (item.status) {
-        header.appendChild(createElement("span", "status-badge", item.status));
-      }
-      article.appendChild(header);
-
-      var copy = createElement("div", "framework-copy");
-      if (Array.isArray(item.paragraphs)) {
-        item.paragraphs.forEach(function (paragraph) {
-          copy.appendChild(createElement("p", "", paragraph));
-        });
-      }
-      article.appendChild(copy);
-
-      if (item.note) {
-        article.appendChild(createElement("p", "framework-note", item.note));
+      var article = createElement("article", "life-perspective");
+      var symbol = createElement("img", "");
+      symbol.src = item.symbol;
+      symbol.alt = "";
+      symbol.width = 80;
+      symbol.height = 80;
+      symbol.setAttribute("aria-hidden", "true");
+      article.appendChild(symbol);
+      article.appendChild(createElement("h3", "", item.title));
+      article.appendChild(createElement("p", "perspective-question", item.question));
+      item.paragraphs.forEach(function (paragraph) {
+        article.appendChild(createElement("p", "perspective-copy", paragraph));
+      });
+      if (item.href) {
+        var link = createElement("a", "perspective-link", item.cta);
+        link.href = item.href;
+        article.appendChild(link);
+      } else {
+        article.appendChild(createElement("span", "perspective-coming", item.note));
       }
       target.appendChild(article);
     });
