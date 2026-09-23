@@ -655,7 +655,12 @@
       .page-home .principle-symbol { width: 56px; height: 56px; }
       .page-home .principle-heading-art { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
       .page-home .principle-heading-art .principle-number { margin: 0; }
-      .page-home .writing-card .button { min-width: 112px; justify-content: center; }
+      .page-home .writing-card .button { min-width: 112px; justify-content: center; align-self: center; }
+      .page-home .writing .section-heading .kicker { margin: 0 0 18px; font-size: 12px; line-height: 1.5; letter-spacing: 0; }
+      .page-home .writing .section-heading h2 { font-size: 56px; line-height: 1.12; }
+      @media (max-width: 700px) {
+        .page-home .writing .section-heading h2 { font-size: 38px; }
+      }
       @media (max-width: 680px) {
         .page-home .framework-card:has(.framework-symbol) { grid-template-columns: minmax(0, 1fr); }
         .page-home .framework-symbol { grid-column: 1; grid-row: auto; width: 80px; height: 80px; margin-bottom: 16px; }
@@ -2249,3 +2254,113 @@ body.page-essay .article-return-link { margin-top: 40px; margin-bottom: 0; }
 body.page-essay .article-closing .section-inner { padding-top: 76px; padding-bottom: 56px; }
 @media (max-width: 860px) { body.page-travel .travel-hero::after { background: linear-gradient(180deg, rgba(247, 244, 236, 0.97), rgba(247, 244, 236, 0.8) 58%, rgba(247, 244, 236, 0.2)), linear-gradient(90deg, rgba(247, 244, 236, 0.8), rgba(247, 244, 236, 0.34)); } }
 @media (max-width: 560px) { body.page-travel .travel-hero { min-height: auto; } body.page-travel .travel-hero-inner { min-height: auto; padding-top: 72px; padding-bottom: 72px; } body.page-travel .travel-hero h1 { font-size: 42px; } body.page-travel .travel-hero-copy { gap: 12px; margin-top: 20px; font-size: 17px; line-height: 1.58; } body.page-travel .essay-meta { grid-template-columns: 1fr; } body.page-travel .manifesto-statement, body.page-travel .travel-closing-quote { padding-left: 18px; font-size: clamp(28px, 8vw, 36px); } body.page-travel .essay-card { grid-template-rows: auto; min-height: 0; gap: 20px; overflow: visible; padding: 20px; } body.page-travel .essay-card h3, body.page-travel .essay-card > p { margin: 0; padding: 0; } body.page-travel .essay-card-linkable .essay-card-cta { align-items: center; justify-content: center; min-height: 44px; margin-top: 2px; border: 1px solid rgba(1, 33, 105, 0.22); border-radius: var(--radius); padding: 10px 16px; background: var(--brand-blue); color: var(--brand-ivory); text-decoration: none; } body.page-essay .article-shell { padding-top: 52px; } body.page-essay .article-meta { grid-template-columns: 1fr; } body.page-essay .article-body { margin-top: 42px; } body.page-essay .article-section-marker { margin-top: 64px; margin-bottom: 22px; font-size: 11px; } body.page-essay .article-reflection-marker { margin-top: 0; } body.page-essay .article-closing-quote { margin: 76px auto 76px; padding: 0 6px; font-size: clamp(28px, 9vw, 32px); line-height: 1.4; } body.page-essay .article-image { width: 100%; margin-left: 0; } body.page-essay .life-principle-block { padding: 28px 20px; } }
+/* Life Architecture: equal editorial entries and an accessible principles orbit. */
+.page-home .life-architecture { background: var(--brand-blue); color: var(--brand-ivory); }
+.page-home .life-architecture .kicker,
+.page-home .life-architecture h2,
+.page-home .life-architecture h3 { color: var(--brand-ivory); letter-spacing: 0; }
+.page-home .life-architecture h2 { max-width: 850px; font-size: 56px; line-height: 1.12; }
+.page-home .life-architecture-intro { max-width: 900px; margin: 32px 0 40px; font-size: 19px; line-height: 1.65; }
+.page-home .life-architecture-intro::before { content: ""; display: block; width: 44px; height: 2px; background: var(--brand-gold); margin-bottom: 24px; }
+.page-home .life-architecture-intro p { margin: 0 0 16px; color: var(--brand-ivory); }
+.page-home .life-perspectives { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.page-home .life-perspective { display: grid; grid-template-rows: 80px 76px 44px 1fr 44px; gap: 24px; padding: 28px; border: 1px solid rgba(247,244,236,.45); border-radius: 4px; min-width: 0; }
+.page-home .life-perspective img { width: 80px; height: 80px; }
+.page-home .life-perspective img[src$="life-capitals-symbol.svg"] { transform: scale(.9); transform-origin: left center; }
+.page-home .life-perspective h3 { margin: 0; font-size: 30px; line-height: 1.2; }
+.page-home .life-perspective p { margin: 0; color: var(--brand-ivory); }
+.page-home .perspective-question { max-width: 230px; font-size: 12px; line-height: 1.7; font-weight: 650; text-transform: uppercase; letter-spacing: 0; }
+.page-home .perspective-copy { font-size: 17px; line-height: 1.65; }
+.page-home .perspective-link { justify-self: start; align-self: end; display: inline-flex; align-items: center; min-height: 44px; color: var(--brand-ivory); font-size: 15px; text-decoration: none; border-bottom: 2px solid var(--brand-gold); }
+.page-home .perspective-link:hover { color: var(--brand-gold); }
+.page-home .perspective-coming { align-self: end; display: flex; align-items: center; min-height: 44px; color: rgba(247,244,236,.72); font-size: 14px; }
+.page-life-principles .principles-intro { padding: 52px 0 12px; }
+.page-life-principles .principles-intro h1 { font-size: 64px; line-height: 1.12; letter-spacing: 0; }
+.page-life-principles .principles-intro h1::after { content: ""; display: block; width: 44px; height: 2px; margin: 26px 0; background: var(--brand-gold); }
+.page-life-principles .principles-intro > p:last-child { max-width: 760px; font-size: 19px; line-height: 1.65; margin: 0; }
+.page-life-principles .principles-orbit { position: relative; width: min(100%, 800px); aspect-ratio: 1; margin: 28px auto 0; }
+.page-life-principles .orbit-guide { position: absolute; inset: 14%; border: 1px solid rgba(1,33,105,.25); border-radius: 50%; }
+.page-life-principles .principles-centre { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 32%; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background: var(--brand-blue); color: var(--brand-ivory); text-align: center; font: 32px/1.25 var(--font-display); }
+.page-life-principles .principles-centre::after { content: ""; width: 36px; height: 2px; margin-top: 22px; background: var(--brand-gold); }
+.page-life-principles .principle-node { position: absolute; top: var(--node-y); left: var(--node-x); transform: translate(-50%,-50%); width: 21%; aspect-ratio: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; padding: 14px; border: 1px solid var(--brand-blue); border-radius: 50%; background: var(--brand-ivory); color: var(--brand-blue); cursor: pointer; font: 20px/1.2 var(--font-display); text-align: center; letter-spacing: 0; }
+.page-life-principles .principle-node svg { flex-shrink: 0; }
+.page-life-principles .principle-node:nth-of-type(3) svg,
+.page-life-principles .principle-node:nth-of-type(6) svg { color: var(--brand-gold); }
+.page-life-principles .principle-node:nth-of-type(4) svg { color: var(--brand-red); }
+.page-life-principles .principle-node[aria-expanded="true"] { outline: 2px solid var(--brand-gold); outline-offset: 4px; }
+.page-life-principles .principle-node:focus-visible { outline: 3px solid var(--brand-red); outline-offset: 5px; }
+.page-life-principles .principle-details { min-height: 160px; max-width: 660px; margin: 0 auto 56px; text-align: center; }
+.page-life-principles .principle-description { border-top: 1px solid var(--brand-gold); padding-top: 22px; }
+.page-life-principles .principle-description h2 { font-size: 28px; margin: 0 0 10px; letter-spacing: 0; }
+.page-life-principles .principle-description p { margin: 0; font-size: 18px; line-height: 1.65; }
+.page-life-principles .principles-static { margin-bottom: 48px; }
+.page-life-principles .principles-static dt { font-weight: 700; margin-top: 20px; }
+.page-life-principles .principles-static dd { margin: 8px 0; }
+.page-life-principles .principles-application { border-top: 1px solid var(--brand-gold); padding: 36px 0 56px; }
+.page-life-principles .principles-application .kicker { font-size: 12px; letter-spacing: 0; margin: 0 0 14px; }
+.page-life-principles .principles-application h2 { font-size: 30px; line-height: 1.2; letter-spacing: 0; }
+.page-life-principles .principles-application > p:last-child { max-width: 660px; margin: 16px 0 0; color: var(--blue-muted); font-size: 17px; line-height: 1.65; }
+@media (max-width: 1000px) {
+  .page-home .life-perspective { padding: 22px; gap: 20px; grid-template-rows: 80px 102px 60px 1fr 44px; }
+  .page-home .life-perspective h3 { font-size: 28px; }
+  .page-life-principles .principles-intro h1 { font-size: 52px; }
+  .page-life-principles .principles-centre { font-size: 28px; }
+  .page-life-principles .principle-node { font-size: 18px; gap: 8px; padding: 12px; }
+  .page-life-principles .principle-node svg { width: 32px; height: 32px; }
+}
+@media (max-width: 700px) {
+  .page-home .life-architecture h2 { font-size: 38px; }
+  .page-home .life-architecture-intro { font-size: 17px; }
+  .page-home .life-perspectives { grid-template-columns: 1fr; }
+  .page-home .life-perspective { grid-template-rows: 64px auto auto 1fr 44px; padding: 24px; }
+  .page-home .life-perspective img { width: 64px; height: 64px; }
+  .page-home .life-perspective h3 { font-size: 30px; }
+  .page-home .perspective-question { max-width: none; }
+  .page-life-principles .principles-intro { padding-top: 36px; }
+  .page-life-principles .principles-intro h1 { font-size: 40px; }
+  .page-life-principles .principles-intro > p:last-child { font-size: 17px; }
+  .page-life-principles .principles-orbit { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px 16px; aspect-ratio: auto; margin: 30px 0; }
+  .page-life-principles .orbit-guide { display: none; }
+  .page-life-principles .principles-centre { position: static; transform: none; grid-column: 1 / -1; justify-self: center; width: 210px; margin: 0 0 12px; }
+  .page-life-principles .principle-node { position: static; transform: none; width: 100%; max-width: 180px; justify-self: center; font-size: 18px; }
+  .page-life-principles .principle-details { min-height: 190px; text-align: left; margin-bottom: 40px; }
+}
+
+/* A light Journey separates the personal story from Life Architecture. */
+.page-home .story { background: var(--brand-ivory); color: var(--brand-blue); }
+.page-home .story h2, .page-home .story .field-note h3,
+.page-home .story-question, .page-home .journey-thread li { color: var(--brand-blue); }
+.page-home .story p, .page-home .story .field-note .eyebrow { color: var(--blue-muted); }
+.page-home .story > .section-inner > .kicker { color: var(--brand-red); }
+.page-home .story .field-note { border-color: var(--line); }
+@media (max-width: 600px) {
+  .page-home .journey-thread li::before { background: var(--brand-blue); }
+  .page-home .journey-thread li:not(:last-child)::after { border-color: rgba(1,33,105,.35); }
+  .page-home .journey-thread li:last-child::before { outline-color: var(--brand-blue); }
+}
+
+/* Nearby descriptions on desktop; the same content becomes mobile disclosures. */
+.page-life-principles .principles-orbit { margin-bottom: 60px; }
+.page-life-principles .principle-item { position: absolute; left: calc(var(--node-x) - 10.5%); top: calc(var(--node-y) - 10.5%); width: 21%; aspect-ratio: 1; }
+.page-life-principles .principle-item .principle-node { position: static; transform: none; width: 100%; max-width: none; }
+.page-life-principles .principle-node svg { color: var(--brand-blue); }
+.page-life-principles #principle-2 svg, .page-life-principles #principle-5 svg { color: var(--brand-gold); }
+.page-life-principles #principle-3 svg { color: var(--brand-red); }
+.page-life-principles .principle-description { position: fixed; z-index: 50; width: 270px; padding: 20px; background: var(--brand-ivory); border: 1px solid var(--brand-gold); border-radius: 4px; box-shadow: 0 6px 18px rgba(1,33,105,.1); text-align: left; }
+.page-life-principles .principle-description[hidden] { display: none; }
+.page-life-principles .principle-description h2 { font-size: 23px; }
+.page-life-principles .principle-description p { font-size: 16px; line-height: 1.6; }
+.page-life-principles .principle-toggle { display: none; }
+@media (max-width: 700px) {
+  .page-life-principles .principles-orbit { display: flex; flex-direction: column; gap: 0; margin-bottom: 48px; }
+  .page-life-principles .principles-centre { align-self: center; flex-shrink: 0; margin-bottom: 32px; }
+  .page-life-principles .principle-item { position: static; width: 100%; aspect-ratio: auto; border-top: 1px solid var(--line); }
+  .page-life-principles .principle-item:last-child { border-bottom: 1px solid var(--line); }
+  .page-life-principles .principle-item .principle-node { display: grid; grid-template-columns: 32px minmax(0,1fr) 16px; gap: 16px; aspect-ratio: auto; min-height: 76px; padding: 18px 8px; border: 0; border-radius: 0; text-align: left; font-size: 23px; }
+  .page-life-principles .principle-node[aria-expanded="true"] { outline: none; }
+  .page-life-principles .principle-node:focus-visible { outline: 3px solid var(--brand-red); outline-offset: 2px; }
+  .page-life-principles .principle-toggle { display: block; width: 9px; height: 9px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
+  .page-life-principles .principle-node[aria-expanded="true"] .principle-toggle { transform: rotate(225deg); }
+  .page-life-principles .principle-description { position: static; width: auto; border: 0; border-radius: 0; box-shadow: none; padding: 0 12px 24px 56px; }
+  .page-life-principles .principle-description h2 { display: none; }
+}
