@@ -193,7 +193,7 @@ def render(collection):
       </div>
     </main>
     <div class="collection-footer"><div class="collection-shell">{footer()}</div></div>
-    <script src="../../assets/common-navigation.js?v={VERSION}" defer></script>
+    <script src="../../assets/common-navigation.js?v=20260923-frameworks-menu" defer></script>
     <script src="../../assets/common-footer.js?v={VERSION}" defer></script>
   </body>
 </html>
